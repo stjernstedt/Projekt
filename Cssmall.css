@@ -1,0 +1,75 @@
+body {
+    background-color: #FFE6B5;
+}
+
+
+#mainwindow{
+border:black solid 1px;
+width:1200px;
+margin-left:auto;
+margin-right:auto;
+height:1000px;
+}
+
+
+
+
+
+#header{
+	background-image:url();
+	background-repeat:no-repeat;
+	height:200px;
+	
+	background-color:#FFE6B5;
+	width:1200px;
+}
+
+.Knappar li a{
+	background-color:#966C18;
+	color:#000000;
+	padding:0px 20px 20px 0px;
+    height: 100px;
+    width: 100px;
+    text-decoration:none;
+    font-weight: bold;
+    line-height: 25px;
+    text-align: center;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	margin-top:0px;
+	font-size:20px;
+	
+}
+.Knappar li a:hover{
+	background-color:#FFCB63;
+	color:#000000;
+}
+.Meny  ul{
+	margin-top:-20px;
+	height:50px;
+	width:1100px;
+	
+	border:black solid 1px;
+}
+.Meny li {
+	
+	list-style-type:none;
+	float:left;
+}
+
+
+
+
+label {
+    width: 8em;
+    float: left;
+    text-align: left;
+    margin-right: 1em;
+    margin-left: 3em;
+}
+
+div#inlogg {
+    margin-top: 10em;
+    margin-left: 5em;
+}
