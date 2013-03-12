@@ -1,16 +1,15 @@
 body{
-background-color:#B49A66;
-
+    background-color:#B49A66;
 }
 
 #mainwindow{
-background-color:#ffffff;
-border:black solid 1px;
-width:1200px;
-margin-left:auto;
-margin-right:auto;
-height:1000px;
-margin-top:-9px;
+    background-color:#ffffff;
+    border:black solid 1px;
+    width:1200px;
+    margin-left:auto;
+    margin-right:auto;
+    height:1000px;
+    margin-top:-9px;
 }
 
 
@@ -18,61 +17,61 @@ margin-top:-9px;
 
 
 #header{
-	background-image:url();
-	background-repeat:no-repeat;
-	height:200px;
-	
-	background-color:#FFE6B5;
-	width:1200px;
+    background-image:url();
+    background-repeat:no-repeat;
+    height:200px;
+
+    background-color:#FFE6B5;
+    width:1200px;
 }
 /*Här börjar koden för menyn*/
 .Meny li a{
-	background-color:#966C18;
-	color:#000000;
-	float:left;
+    background-color:#966C18;
+    color:#000000;
+    float:left;
     height: 50px;
     width: 200px;
     text-decoration:none;
     font-weight: bold;
     line-height: 25px;
     text-align: center;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-	margin-top:0px;
-	font-size:20px;
-	
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin-top:0px;
+    font-size:20px;
+
 }
 .Meny li a:hover{
-	background-color:#FFCB63;
-	color:#000000;
+    background-color:#FFCB63;
+    color:#000000;
 }
 .Meny {
-	background-color:#B49A66;
-	margin-top:-20px;
-	height:51px;
-	width:1199px;
-	float:left;
-	border:black solid 1px;
-	position:absolute;
-	top:199px;
+    background-color:#B49A66;
+    margin-top:-20px;
+    height:51px;
+    width:1199px;
+    float:left;
+    border:black solid 1px;
+    position:absolute;
+    top:199px;
 }
 .Meny ul li {
-	margin-top:-16px;
-	Margin-right:41px;
-	Margin-left:-41px;
-	height:50px;
-	border:black solid 1px;
-	width:200px;
-	list-style-type:none;
-	float:left;
-	
+    margin-top:-16px;
+    Margin-right:41px;
+    Margin-left:-41px;
+    height:50px;
+    border:black solid 1px;
+    width:200px;
+    list-style-type:none;
+    float:left;
+
 }
 
 .sökruta{
-float:right;
-/* border:black solid 1px; */
-margin-right: 100px;
+    float:right;
+    /* border:black solid 1px; */
+    margin-right: 100px;
 }
 /*Här slutar koden för menyn*/
 
@@ -80,36 +79,51 @@ margin-right: 100px;
 
 /*Här börjar kod för login och reg knapparna*/
 .login  {
-/* border:black solid 1px; */
-position:absolute;
-top:30px;
-width:300px;
-right:350px;
+    /* border:black solid 1px; */
+    position:absolute;
+    top:30px;
+    width:300px;
+    right:350px;
 }
 .loginreg ul li{
-	float:left;
-	margin-right:20px;
-	list-style-type:none;
+    float:left;
+    margin-right:20px;
+    list-style-type:none;
 }
 .loginreg ul li a{
-	background-color:#966C18;
-	color:#000000;
-	Float:left;
+    background-color:#966C18;
+    color:#000000;
+    Float:left;
     height: 10;
     width: 100px;
     text-decoration:none;
     font-weight: bold;
     line-height: 25px;
     text-align: center;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-	margin-top:0px;
-	font-size:20px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin-top:0px;
+    font-size:20px;
 }
 .loginreg li a:hover{
-	background-color:#FFCB63;
-	color:#000000;
+    background-color:#FFCB63;
+    color:#000000;
 }
 
 /*Här slutar kod för login och reg knapparna*/
+
+/* stylesheets för forms */
+label {
+    width: 8em;
+    float: left;
+    text-align: left;
+    margin-right: 1em;
+    margin-left: 3em;
+}
+
+div#inlogg {
+    margin-top: 10em;
+    margin-left: 5em;
+}
+/* forms slutar */
