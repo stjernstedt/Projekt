@@ -9,9 +9,8 @@
 <body>
 <div id="mainwindow">
 <?php include("header.php"); ?>
+<?php include("Login.php")?>
 <?php include("Menyknappar.php")?>
-<?php include("inlogg.php")?>
-
 
 
 </div>

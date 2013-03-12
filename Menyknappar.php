@@ -1,9 +1,18 @@
 <div class="Meny">
-	<ul class="Knappar">
+	<ul>
 		<li><a href="#">Hem</a></li>
 		<li><a href="#">Vardagsrum</a></li>
 		<li><a href="#">Kök</a></li>
 		<li><a href="#">Sovrum</a></li>
 	</ul>
 
+  <div class="sökruta">
+	<form name="Sök">
+		SÖK:<input type="text">
+	
+	
+	
+	
+	</form>
+	</div>
 </div>
