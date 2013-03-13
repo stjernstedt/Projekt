@@ -10,9 +10,9 @@
         <div id="mainwindow">
             <?php
             include("header.php");
-            include("Login.php");
             include("Menyknappar.php");
-            include("inlogg.php")
+            include("SecondWindow.php");
+            
             ?>
 
 

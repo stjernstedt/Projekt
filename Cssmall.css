@@ -1,24 +1,31 @@
 body{
-    background-color:#B49A66;
+    background-image:url(bakgrundsbild2.jpg);
+    background-repeat:no-repeat;
+    
 }
 
 #mainwindow{
     background-color:#ffffff;
-    border:black solid 1px;
+    /*border:black solid 1px;*/
     width:1200px;
     margin-left:auto;
     margin-right:auto;
-    height:1000px;
+    height:945px;
     margin-top:-9px;
+}
+
+#SecondWindow{
+    position: static;
+    margin-top: 30px;
+    /*border:red solid 1px;*/
+    width:1200px;
+    height: 713px;
 }
 
 
 
-
-
 #header{
-    background-image:url();
-    background-repeat:no-repeat;
+    
     height:200px;
 
     background-color:#FFE6B5;
@@ -30,10 +37,10 @@ body{
     color:#000000;
     float:left;
     height: 50px;
-    width: 200px;
+    width: 120px;
     text-decoration:none;
     font-weight: bold;
-    line-height: 25px;
+    line-height: 50px;
     text-align: center;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -50,19 +57,19 @@ body{
     background-color:#B49A66;
     margin-top:-20px;
     height:51px;
-    width:1199px;
+    width:1200px;
     float:left;
-    border:black solid 1px;
+    /*border:black solid 1px;*/
     position:absolute;
     top:199px;
 }
 .Meny ul li {
     margin-top:-16px;
     Margin-right:41px;
-    Margin-left:-41px;
+    Margin-left:-40px;
     height:50px;
-    border:black solid 1px;
-    width:200px;
+    /*border:black solid 1px;*/
+    width:120px;
     list-style-type:none;
     float:left;
 
@@ -70,7 +77,7 @@ body{
 
 .sökruta{
     float:right;
-    /* border:black solid 1px; */
+    /*border:black solid 1px;*/
     margin-right: 100px;
 }
 /*Här slutar koden för menyn*/
@@ -79,22 +86,28 @@ body{
 
 /*Här börjar kod för login och reg knapparna*/
 .login  {
-    /* border:black solid 1px; */
-    position:absolute;
-    top:30px;
+    /*border:black solid 1px;*/
+    
+    top:3px;
+    float:right;
     width:300px;
-    right:350px;
+    
 }
-.loginreg ul li{
+
+
+.login ul li{
     float:left;
-    margin-right:20px;
+    height: 28px;
+    width: 100px;
+    /*border:black solid 1px;*/
+    margin-right:10px;
     list-style-type:none;
 }
-.loginreg ul li a{
+.login ul li a{
     background-color:#966C18;
     color:#000000;
-    Float:left;
-    height: 10;
+    float:left;
+    height: 27px;
     width: 100px;
     text-decoration:none;
     font-weight: bold;
@@ -103,10 +116,10 @@ body{
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    margin-top:0px;
+    
     font-size:20px;
 }
-.loginreg li a:hover{
+.login li a:hover{
     background-color:#FFCB63;
     color:#000000;
 }
