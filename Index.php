@@ -12,7 +12,7 @@
             include("header.php");
             include("Login.php");
             include("Menyknappar.php");
-            include("registrera.php")
+            include("inlogg.php")
             ?>
 
 
