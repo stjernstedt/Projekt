@@ -18,7 +18,7 @@ Måndag - Fredag 09.00 - 18.00 Lördag 10.00 - 17.00  Söndag 10.00 - 17.00
 "NAMN" expedierar vanligtvis beställda varor inom 24 timmar om produkten finns i vårt lager och beställningen görs innan kl 13.00 vardagar. För större försändelser är leveranstiden 2-4 arbetsdagar.
 
 <H1>Fraktkostnad:</H1>
-Frakten ligger alltid på 200:- eftersom vi kör hem produkterna till dig.
+Frakten ligger alltid på 200:- eftersom vi kör hem produkterna till dig.NICE!!!!!!!!
 
 <H1>Leverans:</H1>
 DHL levererar produkten till din dörr, efter telefonavisering, vardagar mellan kl. 15:00–18:00
