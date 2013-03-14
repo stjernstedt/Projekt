@@ -11,7 +11,7 @@
             <?php
             include("header.php");
             include("Menyknappar.php");
-            include("SecondWindow.php");
+            
             
             ?>
 
