@@ -5,25 +5,48 @@ mysql_select_db('projekt');
 
 $exists = false;
 
-$förnamn = $_POST['förnamn'];
-$efternamn = $_POST['efternamn'];
-$personnr = $_POST['personnr'];
-$adress = $_POST['adress'];
-$postnr = $_POST['postnr'];
+$forename = $_POST['förnamn'];
+$surname = $_POST['efternamn'];
+$personalcn = $_POST['personnr'];
+$address = $_POST['adress'];
+$zipcode = $_POST['postnr'];
 $email = $_POST['email'];
-$telefonnr = $_POST['telefonnr'];
-$användarid = $_POST['användarid'];
-$lösenord = $_POST['lösenord'];
+$phonenumber = $_POST['telefonnr'];
+$userid = $_POST['användarid'];
+$password = $_POST['lösenord'];
 
-$query = "INSERT INTO login VALUES ('$användarid', '$lösenord')";
-$result = mysql_query($query) or die(mysql_error());
+/* hämtar data från databasen och gör en check om userid eller personnr redan finns */
+$qcheck1 = "SELECT * FROM login";
+$res1 = mysql_query($qcheck1);
+while ($line = mysql_fetch_array($res1)) {
+    if ($line['UsersID'] == $userid) {
+        $exists = true;
+        echo 'Användarnamnet är upptaget!';
+        break;
+    }
+}
+$qcheck2 = "SELECT * FROM kund";
+$res2 = mysql_query($qcheck2);
+while ($line = mysql_fetch_array($res2)) {
+    if ($line['PersonalCN'] == $personalcn) {
+        $exists = true;
+        echo 'Personnummret är redan registrerat!';
+        break;
+    }
+}
 
-//echo $result;
 
-$query = "INSERT INTO kund (Personnr, Fornamn, Efternamn, Adress, Postnr, Email, Telefonnr, AnvID)
-    VALUES ('$personnr', '$förnamn', '$efternamn', '$adress', '$postnr', '$email', '$telefonnr', '$användarid')";
-$result = mysql_query($query) or die(mysql_error());
+/* För in data i databasen om checkarna var ok */
+if ($exists == false) {
+    $q1 = "INSERT INTO login VALUES ('$userid', '$password')";
+    $res3 = mysql_query($q1) or die(mysql_error());
 
-echo $result;
+    $q2 = "INSERT INTO kund (PersonalCN, Forename, Surname, Address, Zipcode, Email, Phonenumber, UserID)
+    VALUES ('$personalcn', '$forename', '$surname', '$address', '$zipcode', '$email', '$phonenumber', '$userid')";
+    $res4 = mysql_query($q2) or die(mysql_error());
+}
 
+mysql_free_result($res1);
+mysql_free_result($res2);
+mysql_close($conn);
 ?>
