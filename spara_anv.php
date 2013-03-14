@@ -5,23 +5,23 @@ mysql_select_db('projekt');
 
 $exists = false;
 
-$förnamn = $_POST['förnamn'];
-$efternamn = $_POST['efternamn'];
-$personnr = $_POST['personnr'];
-$adress = $_POST['adress'];
-$postnr = $_POST['postnr'];
+$fname = $_POST['forename'];
+$Sname = $_POST['surname'];
+$persid = $_POST['personalcn'];
+$address = $_POST['address'];
+$zip = $_POST['zipcode'];
 $email = $_POST['email'];
-$telefonnr = $_POST['telefonnr'];
-$användarid = $_POST['användarid'];
-$lösenord = $_POST['lösenord'];
+$phone = $_POST['phonenr'];
+$user = $_POST['userid'];
+$pass = $_POST['password'];
 
-$query = "INSERT INTO login VALUES ('$användarid', '$lösenord')";
+$query = "INSERT INTO login VALUES ('$user', '$pass')";
 $result = mysql_query($query) or die(mysql_error());
 
 //echo $result;
 
-$query = "INSERT INTO kund (Personnr, Fornamn, Efternamn, Adress, Postnr, Email, Telefonnr, AnvID)
-    VALUES ('$personnr', '$förnamn', '$efternamn', '$adress', '$postnr', '$email', '$telefonnr', '$användarid')";
+$query = "INSERT INTO kund (PersonalCN, Forename, Surname, Address, Zipcode, Email, Phonenumber, UserID)
+    VALUES ('$persid', '$fname', '$Sname', '$address', '$zip', '$email', '$phone', '$user')";
 $result = mysql_query($query) or die(mysql_error());
 
 echo $result;

@@ -42,9 +42,6 @@ body{
     font-weight: bold;
     line-height: 50px;
     text-align: center;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
     margin-top:0px;
     font-size:20px;
 
@@ -73,6 +70,25 @@ body{
     list-style-type:none;
     float:left;
 
+}
+.Meny ul li ul li{
+    width: 120px;
+    margin-bottom:15px;
+    border-right:black solid 1px;
+    border-left:black solid 1px;
+    border-bottom:black solid 1px;
+}
+li ul{
+    Display:none;
+    
+}
+
+li:hover ul{
+    
+    display: block;
+    margin-top:65px;
+    
+    
 }
 
 .sökruta{
@@ -123,6 +139,7 @@ body{
     background-color:#FFCB63;
     color:#000000;
 }
+
 
 /*Här slutar kod för login och reg knapparna*/
 
