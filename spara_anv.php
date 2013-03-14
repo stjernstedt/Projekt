@@ -5,15 +5,15 @@ mysql_select_db('projekt');
 
 $exists = false;
 
-$fname = $_POST['forename'];
-$Sname = $_POST['surname'];
-$persid = $_POST['personalcn'];
+$forename = $_POST['forename'];
+$surname = $_POST['surname'];
+$personalcn = $_POST['personalcn'];
 $address = $_POST['address'];
-$zip = $_POST['zipcode'];
+$zipcode = $_POST['zipcode'];
 $email = $_POST['email'];
-$phone = $_POST['phonenr'];
-$user = $_POST['userid'];
-$pass = $_POST['password'];
+$phonenumber = $_POST['phonenr'];
+$userid = $_POST['userid'];
+$password = $_POST['password'];
 
 /* hämtar data från databasen och gör en check om userid eller personnr redan finns */
 $qcheck1 = "SELECT * FROM login";
