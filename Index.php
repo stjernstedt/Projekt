@@ -1,5 +1,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http//www.w3.org/T/html4/loose.dtd">
+<?php
+    session_start();
+?>
 <html>
     <head>
         <META http-equiv="Content-Type" content="text/html;
@@ -11,7 +14,6 @@
             <?php
             include("header.php");
             include("Menyknappar.php");
-            
             
             ?>
 
