@@ -1,11 +1,13 @@
 <div id="header">
     <div class="login">
         <?php
+        /* visar olika knappar beroende på om användaren är inloggad eller inte */
         if (isset($_SESSION['loggedin'])) {
             echo '
-                <ul>
-		<li><a href="user_logout.php">Logga ut</a></li>
-		<li><a href="#">Profil</a></li>
+        Välkommen, ' . $_SESSION['user'] . '                
+        <ul>
+        <li><a href="user_logout.php">Logga ut</a></li>
+	<li><a href="profile.php">Profil</a></li>
 	</ul>
         ';
         } else {
@@ -18,11 +20,6 @@
         }
         ?>
 
-
     </div>
-
-
-
-
 
 </div>

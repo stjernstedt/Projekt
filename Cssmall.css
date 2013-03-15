@@ -22,15 +22,13 @@ body{
     height: 713px;
 }
 
-
-
 #header{
-    
     height:200px;
-
     background-color:#FFE6B5;
     width:1200px;
+    margin-bottom: 3em;
 }
+
 /*Här börjar koden för menyn*/
 .Meny li a{
     background-color:#966C18;
