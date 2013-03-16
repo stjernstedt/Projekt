@@ -49,6 +49,7 @@ body{
     color:#000000;
 }
 .Meny {
+    z-index: 5;
     background-color:#B49A66;
     margin-top:-20px;
     height:51px;
@@ -140,6 +141,45 @@ li:hover ul{
 
 
 /*Här slutar kod för login och reg knapparna*/
+.vardagsrum a{
+    
+    background-color:#966C18;
+    color:#000000;
+    float:left;
+    height: 20px;
+    width: 100px;
+    
+    text-decoration:none;
+    font-weight: bold;
+    margin-right: 5px;
+    text-align: center;
+    
+    
+    
+}
+.vardagsrum a:hover{
+    background-color:#FFCB63;
+    color:#000000;
+}
+.vara{
+    border:black solid 1px;
+    width:300px;
+    height: 300px;
+    float: left;
+}
+.bild{
+    margin-left: 90px;
+    margin-bottom: 20px;
+}
+.varuutskrift{
+    position: relative;
+   border: black solid 1px;
+    height: 100px;
+}
+.varuknappar{
+    border: black solid 1px;
+    margin-top: 100px;
+}
 
 /* stylesheets för forms */
 label {

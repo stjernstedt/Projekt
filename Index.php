@@ -16,7 +16,12 @@
             include("Menyknappar.php");
             
             ?>
-
+            <div id="SecondWindow">
+               
+                
+                
+                
+            </div>
 
         </div>
 
