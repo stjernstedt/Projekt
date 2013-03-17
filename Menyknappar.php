@@ -27,23 +27,42 @@
 
 
             <ul>
-                <li><a href="index.php?page=productdisplay&belonging=sovrum&furniture=säng">Sängar</a></li>  
+                <?php
+                createLink('sovrum','säng','Sängar');
+                createLink('sovrum','förvaring','Förvaring');
+                createLink('sovrum','bord','Bord');
+                createLink('sovrum','belysning','Belysning');
+                ?>
+                
+<!--                <li><a href="index.php?page=productdisplay&belonging=sovrum&furniture=säng">Sängar</a></li>  
                 <li><a href="index.php?page=productdisplay&belonging=sovrum&furniture=förvaring">Förvaring</a></li> 
                 <li><a href="index.php?page=productdisplay&belonging=sovrum&furniture=bord">Bord</a></li>
-                <li><a href="index.php?page=productdisplay&belonging=sovrum&furniture=belysning">Belysning</a></li>
+                <li><a href="index.php?page=productdisplay&belonging=sovrum&furniture=belysning">Belysning</a></li>-->
             </ul>
         </li>
         <li><a href="index.php?page=productdisplay&belonging=arbetsrum">Arbetsrum</a>
 
             <ul>
-                <li><a href="index.php?page=productdisplay&belonging=arbetsrum&furniture=bord">Skrivbord</a></li>  
-                <li><a href="index.php?page=productdisplay&belonging=arbetsrum&furniture=stol">Stolar</a></li> 
-                <li><a href="index.php?page=productdisplay&belonging=arbetsrum&furniture=förvaring">Förvaring</a></li>
-                <li><a href="index.php?page=productdisplay&belonging=arbetsrum&furniture=belysning">Belysning</a></li> 
+                <?php
+                createLink('arbetsrum','bord','Skrivbord');
+                createLink('arbetsrum','stol','Stolar');
+                createLink('arbetsrum','förvaring','Förvaring');
+                createLink('arbetsrum','belysning','Belysning');
+                
+//               <li><a href="index.php?page=productdisplay&belonging=arbetsrum&furniture=bord">Skrivbord</a></li>  
+//               <li><a href="index.php?page=productdisplay&belonging=arbetsrum&furniture=stol">Stolar</a></li> 
+//              <li><a href="index.php?page=productdisplay&belonging=arbetsrum&furniture=förvaring">Förvaring</a></li>
+//                <li><a href="index.php?page=productdisplay&belonging=arbetsrum&furniture=belysning">Belysning</a></li> 
+               ?>
+
             </ul>
 
 
-
+<?php
+function createLink($belonging,$furniture,$title){
+    echo '<li><a href="index.php?page=productdisplay&belonging='.$belonging.'&furniture='.$furniture.'">'.$title.'</a></li>';
+}
+?>
         </li>
         <li><a href="#">Information</a>
             <ul>

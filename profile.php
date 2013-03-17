@@ -1,5 +1,7 @@
 <?php
-session_start();
+if(!isset($_SESSION)) {
+     session_start();
+}
 $conn = mysql_connect('localhost', 'root');
 mysql_select_db('webbshop');
 mysql_set_charset('utf8');

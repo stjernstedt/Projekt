@@ -1,6 +1,14 @@
-<?php session_start();?>
+<?php 
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+if(!isset($_SESSION)) {
+     session_start();
+}
+
+
+?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http//www.w3.org/T/html4/loose.dtd">
 <html>
     <head>
         <META http-equiv="Content-Type" content="text/html;
@@ -19,7 +27,7 @@
             $anslut = mysql_connect("localhost","root","") or die("Could not connect");
 		mysql_select_db('webbshop')or die("could not select database");
             error_reporting(0);
-            mysql_set_charset('UTF8')
+            mysql_set_charset('UTF8');
         
             
         
@@ -53,6 +61,7 @@
 		
 		case "empty":
 			unset($_SESSION['cart']); //unset the whole cart, i.e. empty the cart. 
+                        header('location:cart.php');
 		break;
 	
 	}
@@ -72,6 +81,10 @@
 			//format the cart using a HTML table
 		
 			//iterate through the cart, the $product_id is the key and $quantity is the value
+                
+                        echo '<h1 id="h1cart">Varukorg:</h1>';
+               echo '<div id="maincart">';         
+               echo '<div id="cartruta">';
 			foreach($_SESSION['cart'] as $ProductID => $quantity) {	
 				
 				//get the name, description and price from the database - this will depend on your database implementation.
@@ -81,7 +94,7 @@
 					
 				$result = mysql_query($sql);
 					
-				//Only display the row if there is a product (though there should always be as we have already checked)
+				//Visar raden om det finns en produkt
 				if(mysql_num_rows($result) > 0) {
 				
 					list($Productname, $Sellprice) = mysql_fetch_row($result);
@@ -89,31 +102,44 @@
 					$line_cost = $Sellprice * $quantity;		//work out the line cost
 					$total = $total + $line_cost;			//add to the total cost
 				
-					
-						//show this information in table cells
-						echo 'Produkt: ' . $Productname . '<br>';
+                                        
+                                        
+                                        
+                                            /*Utskrift av varukorg*/
+						echo '<div id="cart">';
+                                                
+                                                echo '<img src="Bilder/'.$ProductID.'.jpg">';
+                                                echo '<div class="produkt">';
+						echo 'Produkt: '.'<br>' . $Productname;
+                                                
 						//along with a 'remove' link next to the quantity - which links to this page, but with an action of remove, and the id of the current product
-						echo 'Antal: ' . "$quantity <a href=\"$_SERVER[PHP_SELF]?action=remove&id=$ProductID\">-</a>". "    " .
-                                                       "<a href=\"$_SERVER[PHP_SELF]?action=add&id=$ProductID\">+</a>" . '<br>';
-						echo 'Pris: '. $line_cost. '<br>';
-					
-					
+						echo '<div class="antal">';
+                                                echo 'Antal: ' . $quantity .'<br>'.'<br>'.'<br>'. "<a href='$_SERVER[PHP_SELF]?action=remove&id=$ProductID'>-</a>" .
+                                                       "<a href='$_SERVER[PHP_SELF]?action=add&id=$ProductID'>+</a>";
+                                                echo '<div class="pris">';
+						echo 'Pris: '.'<br>'. $line_cost.' Kr';
+                                                echo '</div>';
+                                                echo '</div>';
+                                                echo '</div>';
+                                                echo '</div>';
+                                       
 					
 				}
                                 
 			
 			}
-			
+                        echo '</div>';
+                        echo '</div>';
 			//show the total
 			
-				echo "Total:" .$total. '<br>';
+				echo "<h1>Total: $total Kr  </h1>";
 				
 			
 			
 			//show the empty cart link - which links to this page, but with an action of empty. A simple bit of javascript in the onlick event of the link asks the user for confirmation
-			
-				echo "<a href=\"$_SERVER[PHP_SELF]?action=empty\">Empty Cart</a> "."<a href=\"Index.php\">Fortsätt shoppa</a>";
-			
+                        echo '<div class="cartbutton">';
+				echo "<a href=\"Index.php\">Fortsätt shoppa</a>"."<a href=\"$_SERVER[PHP_SELF]?action=empty\">Töm kundvagn</a> ";
+			echo '</div>';
 		
 		
 	

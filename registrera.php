@@ -8,8 +8,8 @@
     <p><label>Telefon</label><input type="text" name="phonenr" class="textbox"></p>
     <br>
     <p><label>Användarid</label><input type="text" name="userid" class="textbox"></p>
-    <p><label>Lösenord</label><input type="text" name="password" class="textbox"></p>
-    <p><label>Lösenord igen</label><input type="text" name="password" class="textbox"></p>
+    <p><label>Lösenord</label><input type="password" name="password" class="textbox"></p>
+    <p><label>Lösenord igen</label><input type="password" name="password" class="textbox"></p>
 
     <p><input type="submit" value="Registrera">
 </form>
