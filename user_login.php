@@ -3,7 +3,7 @@
 session_start();
 
 $conn = mysql_connect('localhost', 'root');
-mysql_select_db('projekt');
+mysql_select_db('webbshop');
 mysql_set_charset('utf8');
 
 $error = TRUE;
@@ -36,7 +36,7 @@ mysql_close($conn);
 
 /* om fel uppstått skickas felet till och användaren tillbaks till inlogg sidan */
 if (isset($_SESSION['errormsg'])) {
-    header('Location: inlogg.php');
+    header('Location: index.php?page=inlogg');
 } else {
     header('Location: index.php');
 }

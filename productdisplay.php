@@ -1,14 +1,7 @@
-<html>
-    <head>
-        <META http-equiv="Content-Type" content="text/html;
-              charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="Cssmall.css">
-    </head>
-
 <?php
 
 $conn = mysql_connect('localhost', 'root');
-mysql_select_db('projekt');
+mysql_select_db('webbshop');
 mysql_set_charset('utf8');
 
 if (isset($_GET['belonging'])) {

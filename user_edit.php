@@ -1,7 +1,7 @@
 <?php
 
 $conn = mysql_connect('localhost', 'root');
-mysql_select_db('projekt');
+mysql_select_db('webbshop');
 mysql_set_charset('utf8');
 
 $forename = $_POST['forename'];

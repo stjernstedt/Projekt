@@ -7,14 +7,14 @@
         Välkommen, ' . $_SESSION['user'] . '                
         <ul>
         <li><a href="user_logout.php">Logga ut</a></li>
-	<li><a href="profile.php">Profil</a></li>
+	<li><a href="index.php?page=profile">Profil</a></li>
 	</ul>
         ';
         } else {
             echo '
         <ul>
-        <li><a href = "inlogg.php">Logga in</a></li>
-        <li><a href = "registrera.php">Registrera</a></li>
+        <li><a href = "index.php?page=inlogg">Logga in</a></li>
+        <li><a href = "index.php?page=registrera">Registrera</a></li>
         </ul>
         ';
         }
