@@ -292,6 +292,12 @@ label {
 div#inlogg {
     margin-top: 10em;
     margin-left: 5em;
+    
+}
+
+.errormsg {
+    margin-left: 2em;
+    color: red;
 }
 /* forms slutar */
 
