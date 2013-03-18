@@ -9,7 +9,8 @@ $q1 = "SELECT * FROM produkter";
 $res1 = mysql_query($q1);
 
 while ($line = mysql_fetch_array($res1)) {
-    if (stristr($line['Productname'], $_GET['term'])) {
+    if (stristr($line['Productname'], $_GET['term']) OR stristr($line['Belonging'], $_GET['term'])
+            OR stristr($line['Furnituretype'], $_GET['term'])) {
         $searchres[] = $line['ProductID'];
     }
 }

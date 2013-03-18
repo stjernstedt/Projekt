@@ -86,7 +86,7 @@ body{
     border-bottom:black solid 1px;
 }
 li ul{
-    Display:none;
+    display:none;
     
 }
 
@@ -99,9 +99,11 @@ li:hover ul{
 }
 
 .sökruta{
-    float:right;
+    position: absolute;
+    /*float:right;*/
+    right: 5%;
     /*border:black solid 1px;*/
-    margin-right: 100px;
+    /*margin-right: 100px;*/
 }
 /*Här slutar koden för menyn*/
 
