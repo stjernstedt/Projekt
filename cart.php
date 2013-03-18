@@ -13,6 +13,7 @@ if(!isset($_SESSION)) {
     <head>
         <META http-equiv="Content-Type" content="text/html;
               charset=UTF-8">
+        <link rel="shortcut icon" href="favicon.ico">
         <link rel="stylesheet" type="text/css" href="Cssmall.css">
     </head>
     <body>
@@ -131,15 +132,19 @@ if(!isset($_SESSION)) {
                         echo '</div>';
                         echo '</div>';
 			//show the total
-			
-				echo "<h1>Total: $total Kr  </h1>";
-				
-			
-			
-			//show the empty cart link - which links to this page, but with an action of empty. A simple bit of javascript in the onlick event of the link asks the user for confirmation
+			echo '<div id="total">';
+                        
                         echo '<div class="cartbutton">';
-				echo "<a href=\"Index.php\">Fortsätt shoppa</a>"."<a href=\"$_SERVER[PHP_SELF]?action=empty\">Töm kundvagn</a> ";
+                        echo '<a href="Index.php">Fortsätt shoppa</a>';
+                        echo "<a href='$_SERVER[PHP_SELF]?action=empty'>Töm kundvagn</a>";
+                        
+                        echo '</div>';
+                        echo '<div id="total1">';
+				echo "<h1>Total: $total Kr  </h1>";
 			echo '</div>';
+			echo '</div>';
+			//show the empty cart link - which links to this page, but with an action of empty. A simple bit of javascript in the onlick event of the link asks the user for confirmation
+                       
 		
 		
 	

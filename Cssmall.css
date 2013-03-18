@@ -13,7 +13,7 @@ body{
 }*/
 
 #mainwindow{
-    background-color:#ffffff;
+    background-color:rgba(255,255,255,0.5);
     /*border:black solid 1px;*/
     width:1200px;
     margin-left:auto;
@@ -261,17 +261,30 @@ li:hover ul{
 .cartbutton a{
     background-color:#966C18;
     color:#000000;
-    height: 20px;
-    width: 200px;
+    height: 40px;
+    width: 100px;
+    float: left;
     text-decoration:none;
     font-weight: bold;
-    margin-right: 18px;
+    margin-right: 180px;
     text-align: center;
+    margin-left: 320px;
     
 }
 .cartbutton a:hover{
     background-color:#FFCB63;
     color:#000000;
+}
+#total{
+    margin-top: -23px;
+    height: 100px;
+}
+#total1{
+    
+    height: 60px;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 500px;
 }
 
 
