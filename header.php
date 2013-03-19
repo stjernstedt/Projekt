@@ -18,8 +18,12 @@
         </ul>
         ';
         }
+        
+        
         ?>
 
     </div>
-
+    <div id="knappvara">
+        <a href="cart.php">Din varukorg</a>
+    </div>
 </div>

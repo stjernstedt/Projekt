@@ -29,14 +29,21 @@
         $sql ="SELECT Productname, Sellprice, Information,Weight,Height,Depth,Width FROM produkter WHERE ProductID='$id'";
         $result = mysql_query($sql) or die("Query Failed".mysqpl_error());
         $row = mysql_fetch_array($result);
+        echo '<div id="varansinfo">';
+        echo '<div id="storbild">'.'<img src="storabilder/'.$id.'.jpg">'.'</div>'.'<div class="viktiginfo">'.'Produkt: '.$row['Productname']."<br>"
+                                                                             
+                                                                             .'Vikt: '.$row['Weight']." kg<br>"
+                                                                             .'Höjd: '.$row['Height']." cm<br>"
+                                                                             .'Djup: '.$row['Depth']." cm<br>"
+                                                                             .'Bredd: '.$row['Width']." cm<br><br>"
+                                                                             .'Pris: '.$row['Sellprice']."Kr<br><br><br><br><br>"
+                                                                             ."<a href='cart.php?action=add&id=$id'>Lägg till</a>"
+                                                                             .'</div>';
         
-        echo   'Namn: '.$row['Productname']."<br>";
-        echo   'Pris: '.$row['Sellprice']."Kr<br>";
+        echo '<div id="inforuta">';
         echo   'Information: '.$row['Information']."<br>";
-        echo   'Vikt: '.$row['Weight']."<br>";
-        echo   'Höjd: '.$row['Height']."<br>";
-        echo   'Djup: '.$row['Depth']."<br>";
-        echo   'Bredd: '.$row['Width']."<br>";
+        echo '</div>';
+        echo   '</div>';
         
         
 
