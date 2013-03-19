@@ -80,7 +80,7 @@ function createLink($belonging,$furniture,$title){
 }
 ?>
         </li>
-        <li><a href="#">Information</a>
+        <li><a href="Information.php">Information</a>
             <ul>
                 <li><a href="">Om oss</a></li>  
                 <li><a href="#">Kontakta oss</a></li> 
