@@ -8,7 +8,7 @@ function checkForm() {
     // Reguljära uttryck som kollar att det är rimlig data
     
     // Om det reguljära uttrycket och indatan ej matchar ges ett error
-    var regex = /^[A-ZÅÄÖ]?[a-zåäö]{2,24}$/;
+    var regex = /^[a-zåäö]{2,24}$/i;
     var input = document.getElementById('forename').value;
     if(!regex.test(input)) {
         document.getElementById('error1').style.display='inline';
@@ -28,7 +28,7 @@ function checkForm() {
         return false;
     }
     
-    regex = /^[A-ZÅÄÖ]?[a-zåäö]{4,20}\s\d{1,4}$/;
+    regex = /^[a-zåäö]{4,20}\s\d{1,4}$/i;
     input = document.getElementById('address').value;
     if(!regex.test(input)) {
         document.getElementById('error4').style.display='inline';

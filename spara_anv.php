@@ -21,15 +21,15 @@ $userid = $_POST['userid'];
 $password = $_POST['password'];
 $password2 = $_POST['password2'];
 
-$regex = "/^[A-ZÅÄÖ]?[a-zåäö]{2,24}$/";
+$regex = "/^[a-zåäöÅÄÖ]{2,24}$/i";
 if(!preg_match($regex, $forename)) {
-    $_SESSION['errormsg'] = "Ej korrekt namn!";
+    $_SESSION['errormsg'] = "Ej korrekt förnamn!";
     header('Location: index.php?page=registrera');
     exit();
 }
 
 if(!preg_match($regex, $surname)) {
-    $_SESSION['errormsg'] = "Ej korrekt namn!";
+    $_SESSION['errormsg'] = "Ej korrekt efternamn!";
     header('Location: index.php?page=registrera');
     exit();
 }
@@ -41,7 +41,7 @@ if(!preg_match($regex, $personalcn)) {
     exit();
 }
 
-$regex = "/^[A-ZÅÄÖ]?[a-zåäö]{4,20}\s\d{1,4}$/";
+$regex = "/^[a-zåäöÅÄÖ]{4,20}\s\d{1,4}$/i";
 if(!preg_match($regex, $address)) {
     $_SESSION['errormsg'] = "Ej korrekt adress!";
     header('Location: index.php?page=registrera');
