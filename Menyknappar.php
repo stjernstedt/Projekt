@@ -95,10 +95,10 @@
     </ul>
 
     <div class="sökruta">
-        <form name="Sök" action="index.php" method="get" onSubmit="document.getElementById('submit').disabled=true">
+        <form name="Sök" action="index.php" method="get">
             <input type="text" name="page" value="search" style="visibility: hidden">
             SÖK:<input type="text" name="term">
-            <input type="submit" style="display: none">
+            <!--<input type="submit" style="display: none">-->
         </form>
     </div>
 </div>

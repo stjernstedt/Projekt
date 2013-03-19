@@ -408,10 +408,10 @@ div#inlogg {
 #productstable a {
     background-color:#966C18;
     color:#000000;
-    padding-left: 3em;
-    padding-right: 3em;
-    height: 20px;
-    width: auto;
+/*    padding-left: 2em;
+    padding-right: 2em;*/
+    height: auto;
+    width: 150px;
     float: right;
     text-decoration:none;
     font-weight: bold;
