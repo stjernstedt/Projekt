@@ -56,7 +56,7 @@ function checkForm() {
         return false;
     }
 
-    regex = /\S{3,25}/;
+    regex = /^[^;]\S{3,25}[^;]$/;
     input = document.getElementById('userid').value;
     if(!regex.test(input)) {
         document.getElementById('error8').style.display='inline';

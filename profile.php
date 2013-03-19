@@ -32,7 +32,7 @@ while ($line = mysql_fetch_array($res1)) {
 
     <p><input type="submit" value="Ändra">
 </form>
-
+<p><div class="profilknappar"><a href="index.php?page=order_history">Order Historik</a></div></p>
 
 <?php
 mysql_close($conn);

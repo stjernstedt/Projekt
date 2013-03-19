@@ -3,7 +3,7 @@ body{
     background-image:url(bakgrundsbild2.jpg);
     background-repeat:no-repeat;
     background-attachment: fixed;
-    
+
 }
 /*#bakgrund{
     position: fixed;
@@ -69,8 +69,8 @@ body{
 }
 .Meny ul li {
     margin-top:-16px;
-    Margin-right:41px;
-    Margin-left:-40px;
+    margin-right:41px;
+    margin-left:-40px;
     height:50px;
     /*border:black solid 1px;*/
     width:120px;
@@ -87,23 +87,20 @@ body{
 }
 li ul{
     display:none;
-    
+
 }
 
 li:hover ul{
-    
+
     display: block;
     margin-top:65px;
-    
-    
+
+
 }
 
 .sökruta{
     position: absolute;
-    /*float:right;*/
     right: 5%;
-    /*border:black solid 1px;*/
-    /*margin-right: 100px;*/
 }
 /*Här slutar koden för menyn*/
 
@@ -112,11 +109,11 @@ li:hover ul{
 /*Här börjar kod för login och reg knapparna*/
 .login  {
     /*border:black solid 1px;*/
-    
+
     top:3px;
     float:right;
     width:300px;
-    
+
 }
 
 
@@ -141,7 +138,7 @@ li:hover ul{
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    
+
     font-size:20px;
 }
 .login li a:hover{
@@ -155,20 +152,20 @@ li:hover ul{
 
 /*Här börjar koden för fin utskrift av produkter och deras knappar*/
 .varuknappar a{
-    
+
     background-color:#966C18;
     color:#000000;
     float:left;
     height: 20px;
     width: 100px;
-    
+
     text-decoration:none;
     font-weight: bold;
     margin-right: 5px;
     text-align: center;
-    
-    
-    
+
+
+
 }
 .varuknappar a:hover{
     background-color:#FFCB63;
@@ -197,7 +194,7 @@ li:hover ul{
 .varuknappar{
     border: black solid 1px;
     padding-left: 30px;
-    
+
 }
 /*Här slutar produkter.*/
 
@@ -205,7 +202,7 @@ li:hover ul{
 /*Här börjar koden för varukorgen*/
 
 #cartruta{
-    
+
     width: 700px;
     margin-left: 320px;
     background-color: #B49A66; 
@@ -215,10 +212,10 @@ li:hover ul{
 }
 #cart{
     margin-left: 100px;
-    
+
     width: 498px;
     height: 101px;
-    
+
     background-color: #FFE6B5; 
 }
 .produkt{
@@ -232,7 +229,7 @@ li:hover ul{
     height: 100px;
     margin-left: 122px;
     margin-top: -43px;
-    
+
 }
 .pris{
     border-left: #B49A66 solid 1px;
@@ -269,7 +266,7 @@ li:hover ul{
     font-weight: bold;
     margin-right: 18px;
     text-align: center;
-    
+
 }
 .cartbutton a:hover{
     background-color:#FFCB63;
@@ -292,7 +289,7 @@ label {
 div#inlogg {
     margin-top: 10em;
     margin-left: 5em;
-    
+
 }
 
 .errormsg {
@@ -301,6 +298,106 @@ div#inlogg {
 }
 /* forms slutar */
 
-.information {
-   H1: font-size: 20pt;
+/* stylesheets för kassan */
+#productstable {
+    width: 40%;
+    position: relative;
+    left: 30%;
 }
+
+#productstable a {
+    background-color:#966C18;
+    color:#000000;
+    padding-left: 3em;
+    padding-right: 3em;
+    height: 20px;
+    width: auto;
+    float: right;
+    text-decoration:none;
+    font-weight: bold;
+    text-align: center;
+}
+
+#productstable a:hover{
+    background-color:#FFCB63;
+    color:#000000;
+}
+
+.productrow:nth-child(odd) {
+    height: 1.4em;
+    background-color: #FFF6BF;
+}
+
+.productrow:nth-child(even) {
+    height: 1.4em;
+    background-color: #FFE6B5;
+}
+
+text.left {
+    position: relative;
+    display: inline;
+    float: left;
+}
+
+text.right {
+    position: relative;
+    display: inline;
+    float: right;
+}
+
+.checkout a {
+    background-color:#966C18;
+    color:#000000;
+    padding-left: 3em;
+    padding-right: 3em;
+    height: 20px;
+    width: auto;
+    float: right;
+    text-decoration:none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.checkout a:hover{
+    background-color:#FFCB63;
+    color:#000000;
+}
+
+#createorder {
+    position: relative;
+    background-color: #B49A66;
+    width: 50%;
+    margin-left: 25%;
+    height: 100px;
+}
+
+#createorder h1 {
+    color:#000000;
+    position: relative;
+    padding-top: 1em;
+    text-decoration:none;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* kassan slutar */
+
+/* stylesheets för profil */
+.profilknappar a {
+    background-color:#966C18;
+    color:#000000;
+    height: 20px;
+    width: 200px;
+    text-decoration:none;
+    font-weight: bold;
+    margin-right: 18px;
+    text-align: center;
+    font-size: 15pt;
+    padding: 0.5em;
+}
+.profilknappar a:hover{
+    background-color:#FFCB63;
+    color:#000000;
+}
+
+/* profil slutar */

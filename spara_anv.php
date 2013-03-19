@@ -69,7 +69,7 @@ if(!preg_match($regex, $phonenumber)) {
     exit();
 }
 
-$regex = "/\S{3,25}/";
+$regex = "/^[^;]\S{3,25}[^;]$/";
 if(!preg_match($regex, $userid)) {
     $_SESSION['errormsg'] = "Välj ett användarnamn mellan 3 och 50 tecken!";
     header('Location: index.php?page=registrera');
@@ -111,8 +111,8 @@ while ($line = mysql_fetch_array($res2)) {
     }
 }
 
-$password = md5($password);
 /* För in data i databasen om checkarna var ok */
+$password = md5($password);
 if ($exists == false) {
     $q1 = "INSERT INTO login VALUES ('$userid', '$password')";
     $res3 = mysql_query($q1) or die(mysql_error());
