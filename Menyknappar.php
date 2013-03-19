@@ -82,10 +82,10 @@ function createLink($belonging,$furniture,$title){
         </li>
         <li><a href="Information.php">Information</a>
             <ul>
-                <li><a href="">Om oss</a></li>  
-                <li><a href="#">Kontakta oss</a></li> 
-                <li><a href="#">Frakt info</a></li>
-                <li><a href="#">Leverans</a></li> 
+                <li><a href="Omoss.php">Om oss</a></li>  
+                <li><a href="KontaktaOss.php">Kontakta oss</a></li> 
+                <li><a href="Frakt.php">Frakt info</a></li>
+                <li><a href="Leverans.php">Leverans</a></li> 
             </ul>
 
 
