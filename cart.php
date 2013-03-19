@@ -137,6 +137,7 @@ if(!isset($_SESSION)) {
                         echo '<div class="cartbutton">';
                         echo '<a href="Index.php">Fortsätt shoppa</a>';
                         echo "<a href='$_SERVER[PHP_SELF]?action=empty'>Töm kundvagn</a>";
+                        echo '<a href="index.php?page=checkout">Till kassan</a>';
                         
                         echo '</div>';
                         echo '<div id="total1">';
