@@ -24,7 +24,8 @@ while ($line = mysql_fetch_array($res1)) {
 
 /* om användaren finns så kollar den om lösenord stämmer, och om det gör det loggas användaren in */
 if ($error == FALSE) {
-    if ($user['Password'] == $_POST['password']) {
+    $password = md5($_POST['password']);
+    if ($user['Password'] == $password) {
         $_SESSION['loggedin'] = 'true';
         $_SESSION['user'] = $_POST['userid'];
     } else {

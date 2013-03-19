@@ -21,7 +21,7 @@ $userid = $_POST['userid'];
 $password = $_POST['password'];
 $password2 = $_POST['password2'];
 
-$regex = "/^[A-ZÅÄÖ]?[a-zåäö]{2,24}$/";
+$regex = "/^[a-zåäöÅÄÖ]{2,24}$/i";
 if(!preg_match($regex, $forename)) {
     $_SESSION['errormsg'] = "Ej korrekt förnamn!";
     header('Location: index.php?page=registrera');
@@ -41,7 +41,7 @@ if(!preg_match($regex, $personalcn)) {
     exit();
 }
 
-$regex = "/^[A-ZÅÄÖ]?[a-zåäö]{4,20}\s\d{1,4}$/";
+$regex = "/^[a-zåäöÅÄÖ]{4,20}\s\d{1,4}$/i";
 if(!preg_match($regex, $address)) {
     $_SESSION['errormsg'] = "Ej korrekt adress!";
     header('Location: index.php?page=registrera');
@@ -111,7 +111,7 @@ while ($line = mysql_fetch_array($res2)) {
     }
 }
 
-
+$password = md5($password);
 /* För in data i databasen om checkarna var ok */
 if ($exists == false) {
     $q1 = "INSERT INTO login VALUES ('$userid', '$password')";
