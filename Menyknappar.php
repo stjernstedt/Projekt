@@ -4,22 +4,38 @@
         <li><a href="index.php?page=productdisplay&belonging=vardagsrum">Vardagsrum</a>
 
             <ul>
-                <li><a href="index.php?page=productdisplay&belonging=vardagsrum&furniture=soffa">Soffa</a></li>  
+                 <?php
+                createLink('vardagsrum','soffa','Soffor');
+                createLink('vardagsrum','förvaring','Förvaring');
+                createLink('vardagsrum','bord','Bord');
+                createLink('vardagsrum','stol','Stolar');
+                createLink('vardagsrum','fotölj','Fotölj');
+                createLink('vardagsrum','belysning','Belysning');
+                ?>
+<!--                <li><a href="index.php?page=productdisplay&belonging=vardagsrum&furniture=soffa">Soffa</a></li>  
                 <li><a href="index.php?page=productdisplay&belonging=vardagsrum&furniture=förvaring">Förvaring</a></li>   
                 <li><a href="index.php?page=productdisplay&belonging=vardagsrum&furniture=bord">Bord</a></li>
                 <li><a href="index.php?page=productdisplay&belonging=vardagsrum&furniture=stol">Stolar</a></li> 
                 <li><a href="index.php?page=productdisplay&belonging=vardagsrum&furniture=fotölj">Fotölj</a></li>
-                <li><a href="index.php?page=productdisplay&belonging=vardagsrum&furniture=belysning">Belysning</a></li>  
+                <li><a href="index.php?page=productdisplay&belonging=vardagsrum&furniture=belysning">Belysning</a></li>  -->
             </ul>
 
         </li>
         <li><a href="index.php?page=productdisplay&belonging=kök">Kök</a>
 
             <ul>
-                <li><a href="index.php?page=productdisplay&belonging=kök&furniture=bord">Bord</a></li>  
+                <?php
+                createLink('kök','bord','Bord');
+                createLink('kök','stol','Stolar');
+                createLink('kök','förvaring','Förvaring');
+                createLink('kök','belysning','Belysning');
+                ?>
+                
+                
+<!--                <li><a href="index.php?page=productdisplay&belonging=kök&furniture=bord">Bord</a></li>  
                 <li><a href="index.php?page=productdisplay&belonging=kök&furniture=stol">Stolar</a></li> 
                 <li><a href="index.php?page=productdisplay&belonging=kök&furniture=förvaring">Förvaring</a></li>
-                <li><a href="index.php?page=productdisplay&belonging=kök&furniture=belysning">Belysning</a></li> 
+                <li><a href="index.php?page=productdisplay&belonging=kök&furniture=belysning">Belysning</a></li> -->
             </ul>
         </li>
 
@@ -64,12 +80,12 @@ function createLink($belonging,$furniture,$title){
 }
 ?>
         </li>
-        <li><a href="#">Information</a>
+        <li><a href="Information.php">Information</a>
             <ul>
-                <li><a href="">Om oss</a></li>  
-                <li><a href="#">Kontakta oss</a></li> 
-                <li><a href="#">Frakt info</a></li>
-                <li><a href="#">Leverans info</a></li> 
+                <li><a href="Omoss.php">Om oss</a></li>  
+                <li><a href="KontaktaOss.php">Kontakta oss</a></li> 
+                <li><a href="Frakt.php">Frakt info</a></li>
+                <li><a href="Leverans.php">Leverans</a></li> 
             </ul>
 
 

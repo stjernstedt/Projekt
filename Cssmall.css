@@ -13,7 +13,7 @@ body{
 }*/
 
 #mainwindow{
-    background-color:#ffffff;
+    background-color:rgba(255,255,255,0.5);
     /*border:black solid 1px;*/
     width:1200px;
     margin-left:auto;
@@ -105,6 +105,37 @@ li:hover ul{
 /*Här slutar koden för menyn*/
 
 
+/*Knapp för varukorg*/
+
+
+
+#knappvara a{
+    
+    margin-top: 150px;
+    background-color:#966C18;
+    color:#000000;
+    float:right;
+    height: 27px;
+    width: 100px;
+    text-decoration:none;
+    font-weight: bold;
+    line-height: 25px;
+    text-align: center;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin-right: -200px;
+}
+
+#knappvara a:hover{
+    background-color:#FFCB63;
+    color:#000000;
+}
+
+
+
+/*här slutar kod för knapp varukorg*/
+
 
 /*Här börjar kod för login och reg knapparna*/
 .login  {
@@ -172,10 +203,14 @@ li:hover ul{
     color:#000000;
 }
 .vara{
-    border:black solid 1px;
+    background-color: #B49A66;
+    border-bottom: black solid 1px;
     width:300px;
     height: 300px;
     float: left;
+}
+.vara:nth-child(odd){
+    background-color: #FFF6BF; 
 }
 .bild{
     margin-left: 90px;
@@ -183,21 +218,73 @@ li:hover ul{
 }
 .varuutskrift{
     position: relative;
-    border: black solid 1px;
+    /*border: black solid 1px;*/
     height: 100px;
 }
 #info{
     height: 80px;
-    border: black solid 1px;
+    /*border: black solid 1px;*/
     overflow: hidden;
 }
 .varuknappar{
-    border: black solid 1px;
+    
     padding-left: 30px;
 
 }
 /*Här slutar produkter.*/
 
+/*Här börjar koden för fin utskrift på kolla info om produkter*/
+#storbild{
+    /*border: black solid 1px;*/
+    width: 500px;
+    height: 500px;
+    
+}
+#varansinfo{
+    /*border: black solid 1px;*/
+    width:900px;
+    margin-left: 150px;
+}
+.viktiginfo{
+    /*border: black solid 1px;*/
+    width: 300px;
+    float: right;
+    margin-top: -480px;
+    margin-right: 80px;
+    font-size: 20pt;
+    height: 480px;
+}
+.viktiginfo a{
+    background-color:#966C18;
+    color:#000000;
+    padding: 10px;
+    height: 27px;
+    width: 100px;
+    text-decoration:none;
+    font-weight: bold;
+    line-height: 25px;
+    text-align: center;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 14pt;
+    margin-left: 80px;
+    
+    
+}
+.viktiginfo a:hover{
+    background-color:#FFCB63;
+    color:#000000;
+}
+#inforuta{
+    /*border: black solid 1px;*/
+    height: 80px;
+    width: 500px;
+}
+
+
+
+/*Här slutar koden, kolla info om produkter*/
 
 /*Här börjar koden för varukorgen*/
 
@@ -260,17 +347,30 @@ li:hover ul{
 .cartbutton a{
     background-color:#966C18;
     color:#000000;
-    height: 20px;
-    width: 200px;
+    height: 40px;
+    width: 100px;
+    float: left;
     text-decoration:none;
     font-weight: bold;
-    margin-right: 18px;
+    margin-right: 180px;
     text-align: center;
-
+    margin-left: 320px;
+    
 }
 .cartbutton a:hover{
     background-color:#FFCB63;
     color:#000000;
+}
+#total{
+    margin-top: -23px;
+    height: 100px;
+}
+#total1{
+    
+    height: 60px;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 500px;
 }
 
 
