@@ -111,7 +111,7 @@ while ($line = mysql_fetch_array($res2)) {
     }
 }
 
-
+$password = md5($password);
 /* För in data i databasen om checkarna var ok */
 if ($exists == false) {
     $q1 = "INSERT INTO login VALUES ('$userid', '$password')";

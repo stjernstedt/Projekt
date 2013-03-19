@@ -77,7 +77,4 @@ function checkForm() {
         return false;
     }
 
-
-//    alert('returns');
-//    return false;
 }
