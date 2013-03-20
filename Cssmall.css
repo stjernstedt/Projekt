@@ -13,7 +13,7 @@ body{
 }*/
 
 #mainwindow{
-    background-color:rgba(255,255,255,0.5);
+    background-color:rgba(255,255,255,0.8);
     /*border:black solid 1px;*/
     width:1200px;
     margin-left:auto;
@@ -27,7 +27,8 @@ body{
     margin-top: 30px;
     /*border:red solid 1px;*/
     width:1200px;
-    height: auto;
+    min-height: 500px;
+    padding-bottom: 20px;
 }
 
 #header{
