@@ -152,13 +152,32 @@ if(!isset($_SESSION)) {
 	
 	}else{
 		//otherwise tell the user they have no items in their cart
-		echo "You have no items in your shopping cart.";
-		echo "<a href=\"Index.php\">Fortsätt shoppa</a>";
+		
+			//show the total
+            echo '<h1 id="h1cart">Varukorg:</h1>';
+             echo '<div id="maincart">';         
+               echo '<div id="cartruta">';
+               echo '<div id="Tomvarukorg">';
+               echo '<h1>'.'Din varukorg är tom'.'</h1>';
+               echo '</div>';
+                        
+                        echo '<div class="cartbutton2">';
+                        echo '<a href="Index.php">Fortsätt shoppa</a>';
+                        
+                        
+                        
+                        
+                        
+			echo '</div>';
+                        
+                        echo '</div>';
+			echo '</div>';
+		
 	}
 	
-	//function to check if a product exists
+	
 	function productExists($ProductID) {
-			//use sprintf to make sure that $product_id is inserted into the query as a number - to prevent SQL injection
+			
 			$sql = sprintf("SELECT * FROM produkter WHERE ProductID = %d;",
 							$ProductID); 
 				

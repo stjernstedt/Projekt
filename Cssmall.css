@@ -358,15 +358,22 @@ a:active{
 
 }
 
-
+#Tomvarukorg{
+    margin-left: 190px;
+}
 .cartbutton a{
     height: 40px;
     width: 100px;
     line-height: 20px;
     margin: 5px;
-
-
-
+}
+.cartbutton2 a{
+    height: 40px;
+    width: 100px;
+    line-height: 20px;
+    margin-top: 25px;
+    margin-left: 275px;
+    
 }
 .cartbutton a:nth-child(2){
     line-height: 40px;
