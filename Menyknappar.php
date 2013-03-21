@@ -96,8 +96,8 @@
 
     <div class="sökruta">
         <form name="Sök" action="index.php" method="get">
-            <input type="text" name="page" value="search" style="visibility: hidden">
-            <input type="text" name="term" placeholder="Sök...">
+            <input type="text" name="page" autocomplete="off" value="search" style="visibility: hidden">
+            <input type="text" name="term" autocomplete="off" placeholder="Sök...">
             <!--<input type="submit" style="display: none">-->
         </form>
     </div>
