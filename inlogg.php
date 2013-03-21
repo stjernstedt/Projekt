@@ -1,6 +1,6 @@
 <div id="inlogg">
     <form action="user_login.php" method="post">
-        <p><label>Användarid</label><input type="text" name="userid"></p>
+        <p><label>Användarnamn</label><input type="text" name="userid"></p>
         <p><label>Lösenord</label><input type="password" name="password"></p>
 
         <p><input type="submit" value="Logga in"></p>
@@ -13,3 +13,4 @@
         }
         ?>
     </form>
+</div>

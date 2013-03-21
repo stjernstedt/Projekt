@@ -48,34 +48,36 @@ if (isset($_GET['furniture'])) {
 }
 
 if (isset($belonging) AND isset($furniture)) {
-    $prod = 'Belonging = "' . $belonging . '" AND Furnituretype = "' . $furniture.'"';
+    $prod = 'Belonging = "' . $belonging . '" AND Furnituretype = "' . $furniture . '"';
 } else {
     if (isset($belonging)) {
-        $prod = 'Belonging = "' . $belonging.'"';
+        $prod = 'Belonging = "' . $belonging . '"';
     } else {
-        $prod = 'Furnituretype = "' . $furniture.'"';
+        $prod = 'Furnituretype = "' . $furniture . '"';
     }
 }
 
 $q1 = "SELECT * FROM produkter WHERE " . $prod;
 $res1 = mysql_query($q1);
+
 echo '<div id="navigering">';
-if(isset($belonging)and isset($furniture)){
-     echo '<h1>'.$belonging .'>'. $furniture.'</h1>';
-}else{
-    echo '<h1>'.$belonging .'</h1>';
+if (isset($belonging) and isset($furniture)) {
+    echo '<h1>' . $belonging . '>' . $furniture . '</h1>';
+} else {
+    echo '<h1>' . $belonging . '</h1>';
 }
 echo '</div>';
+
 echo '<div id="allavaror">';
 while ($line = mysql_fetch_array($res1)) {
     $id = $line['ProductID'];
-    
+
     echo '<div class="vara">';
     echo '<div class="varuutskrift">';
     echo '<div class="bild">';
     echo '<img src="Bilder/' . $line['ProductID'] . '.jpg">';
     echo '</div>';
-    echo '<div id="info">';
+    echo '<div class="info">';
     echo $line['Productname'] . '<br>';
     echo $line['Sellprice'] . ' kr' . '<br>';
     echo $line['Information'] . '<br>';
@@ -85,7 +87,6 @@ while ($line = mysql_fetch_array($res1)) {
     echo '</div>';
     echo '</div>';
     echo '</div>';
-    
 }
 echo '</div>';
 mysql_close($conn);

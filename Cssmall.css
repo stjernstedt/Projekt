@@ -76,11 +76,13 @@ a:active{
 }
 
 #header{
+    
     height:200px;
     background-color:#FFE6B5;
     width:1200px;
 
 }
+
 
 /*Här börjar koden för menyn*/
 .Meny li a{
@@ -272,7 +274,7 @@ a:active{
     /*border: black solid 1px;*/
     height: 100px;
 }
-#info{
+.info{
     height: 80px;
     /*border: black solid 1px;*/
     overflow: hidden;
@@ -283,6 +285,8 @@ a:active{
 
 }
 /*Här slutar produkter.*/
+
+
 
 /*Här börjar koden för fin utskrift på kolla info om produkter*/
 #storbild{
@@ -311,7 +315,7 @@ a:active{
     margin: 5px;
 }
 
-#inforuta{
+.inforuta{
     /*border: black solid 1px;*/
     height: 80px;
     width: 500px;
@@ -324,29 +328,33 @@ a:active{
 /*Här börjar koden för varukorgen*/
 
 #cartruta{
+    
     width: 700px;
-    margin-left: 320px;
+    margin-left: 250px;
     background-color: rgba(255,255,255,0); 
     -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
     -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
     box-shadow:  0 2px 4px rgba(0,0,0,.40);
-
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-
     padding-bottom: 20px;
     border-top: #ED8413 solid 20px;
 }
-#cart:nth-child(odd){
+.cart:nth-child(odd){
     background-color: #FFF6BF; 
 }
-#cart{
+.cart{
     margin-left: 75px;
-    border: black solid 1px;
+    margin-top: 10px;
     width: 550px;
     height: 101px;
-
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    box-shadow:  0 2px 4px rgba(0,0,0,.40);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
     background-color: #FFE6B5; 
 }
 .varukorgbild{
@@ -368,12 +376,12 @@ a:active{
 .pris{
     border-left: #B49A66 solid 1px;
     width: 155px;
-    height: 99px;
+    height: 100px;
     margin-left: 140px;
-    margin-top: -65px;
+    margin-top: -66px;
 }
 #h1cart{
-    margin-left: 170px;
+    margin-left: 500px;
 }
 .antal a{
 
@@ -391,8 +399,10 @@ a:active{
     height: 40px;
     width: 100px;
     line-height: 20px;
-    margin: 5px;
+    margin-left: 10px;
 }
+
+
 .cartbutton2 a{
     height: 40px;
     width: 100px;
@@ -403,20 +413,20 @@ a:active{
 }
 .cartbutton a:nth-child(2){
     line-height: 40px;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 .cartbutton{
-    margin-left: 500px;
+    margin-left: 250px;
+    margin-top: 20px;
 }
-#total{
 
-    height: 150px;
-}
 #total1{
 
     height: 60px;
     width: 300px;
     margin-top: 20px;
-    margin-left: 550px;
+    margin-left: 250px;
 }
 
 
@@ -432,9 +442,8 @@ label {
     margin-left: 3em;
 }
 
-div#inlogg {
-    margin-top: 10em;
-    margin-left: 5em;
+#inlogg {
+    
 
 }
 

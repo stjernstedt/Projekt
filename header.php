@@ -1,4 +1,5 @@
 <div id="header">
+    
     <div class="login">
         <?php
         /* visar olika knappar beroende på om användaren är inloggad eller inte */
@@ -18,8 +19,6 @@
         </ul>
         ';
         }
-        
-        
         ?>
 
     </div>
