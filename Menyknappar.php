@@ -1,5 +1,5 @@
-<div class="Meny">
-    <ul>
+<div class ="menyHeader">
+    <ul class="Meny">
         <li><a href="Index.php">Hem</a></li>
         <li><a href="index.php?page=productdisplay&belonging=vardagsrum">Vardagsrum</a>
 
@@ -97,7 +97,7 @@
     <div class="sökruta">
         <form name="Sök" action="index.php" method="get">
             <input type="text" name="page" value="search" style="visibility: hidden">
-            SÖK:<input type="text" name="term">
+            <input type="text" name="term" placeholder="Sök...">
             <!--<input type="submit" style="display: none">-->
         </form>
     </div>

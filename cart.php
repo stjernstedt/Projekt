@@ -109,7 +109,7 @@ if(!isset($_SESSION)) {
                                             /*Utskrift av varukorg*/
 						echo '<div id="cart">';
                                                 
-                                                echo '<img src="Bilder/'.$ProductID.'.jpg">';
+                                                echo '<img class="varukorgbild" src="Bilder/'.$ProductID.'.jpg">';
                                                 echo '<div class="produkt">';
 						echo 'Produkt: '.'<br>' . $Productname;
                                                 
@@ -136,8 +136,9 @@ if(!isset($_SESSION)) {
                         
                         echo '<div class="cartbutton">';
                         echo '<a href="Index.php">Fortsätt shoppa</a>';
-                        echo "<a href='$_SERVER[PHP_SELF]?action=empty'>Töm kundvagn</a>";
                         echo '<a href="index.php?page=checkout">Till kassan</a>';
+                        echo "<a href='$_SERVER[PHP_SELF]?action=empty'>Töm kundvagn</a>".'<br>'.'<br>'.'<br>';
+                        
                         
                         echo '</div>';
                         echo '<div id="total1">';

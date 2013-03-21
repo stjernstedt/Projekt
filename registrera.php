@@ -3,18 +3,18 @@
         <text id="error1" class="errormsg" style="display: none">Ej korrekt namn!</text></p>
     <p><label>Efternamn</label><input type="text" name="surname" id="surname" class="textbox">
         <text id="error2" class="errormsg" style="display: none">Ej korrekt namn!</text></p>
-    <p><label>Personnummer</label><input type="text" name="personalcn" id="personalcn" class="textbox">
+    <p><label>Personnummer</label><input type="text" name="personalcn" id="personalcn" class="textbox" placeholder="YYMMDDXXXX">
         <text id="error3" class="errormsg" style="display: none">Ej korrekt personnummer!</text></p>
     <p><label>Adress</label><input type="text" name="address" id="address" class="textbox">
         <text id="error4" class="errormsg" style="display: none">Ej korrekt adress!</text></p>
-    <p><label>Postnummer</label><input type="text" name="zipcode" id="zipcode" class="textbox">
+    <p><label>Postnummer</label><input type="text" name="zipcode" id="zipcode" class="textbox" placeholder="000 00">
         <text id="error5" class="errormsg" style="display: none">Ej korrekt postnummer!</text></p>
     <p><label>E-mail</label><input type="text" name="email" id="email" class="textbox">
         <text id="error6" class="errormsg" style="display: none">Ej korrekt email!</text></p>
     <p><label>Telefon</label><input type="text" name="phonenr" id="phonenr" class="textbox">
         <text id="error7" class="errormsg" style="display: none">Ej korrekt telefonnummer!</text></p>
     <br>
-    <p><label>Användarid</label><input type="text" name="userid" id="userid" class="textbox">
+    <p><label>Användarnamn</label><input type="text" name="userid" id="userid" class="textbox">
         <text id="error8" class="errormsg" style="display: none">Välj ett användarnamn mellan 3 och 50 tecken!</text></p>
     <p><label>Lösenord</label><input type="password" name="password" id="password" class="textbox">
         <text id="error9" class="errormsg" style="display: none">Välj ett lösenord mellan 3 och 50 tecken!</text></p>

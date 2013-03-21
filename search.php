@@ -24,10 +24,12 @@ if (!$searchres) {
 
     $q2 = "SELECT * FROM produkter WHERE ProductID IN ($searchres2)";
     $res2 = mysql_query($q2);
-
+    echo '<div id="allavaror">';
     while ($line = mysql_fetch_array($res2)) {
         $id = $line['ProductID'];
         include('searchdisplay.php');
     }
+    echo '</div>';
 }
+
 ?>

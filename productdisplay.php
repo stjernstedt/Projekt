@@ -60,9 +60,10 @@ if (isset($belonging) AND isset($furniture)) {
 $q1 = "SELECT * FROM produkter WHERE " . $prod;
 $res1 = mysql_query($q1);
 
-
+echo '<div id="allavaror">';
 while ($line = mysql_fetch_array($res1)) {
     $id = $line['ProductID'];
+    
     echo '<div class="vara">';
     echo '<div class="varuutskrift">';
     echo '<div class="bild">';
@@ -78,7 +79,8 @@ while ($line = mysql_fetch_array($res1)) {
     echo '</div>';
     echo '</div>';
     echo '</div>';
+    
 }
-
+echo '</div>';
 mysql_close($conn);
 ?>

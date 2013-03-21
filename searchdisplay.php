@@ -1,6 +1,9 @@
 <?php
 
 if (!isset($noresults)) {
+    
+    $id = $line['ProductID'];
+    
     echo '<div class="vara">';
     echo '<div class="varuutskrift">';
     echo '<div class="bild">';
@@ -16,6 +19,7 @@ if (!isset($noresults)) {
     echo '</div>';
     echo '</div>';
     echo '</div>';
+    
 } else {
     echo 'Inga resultat!';
 }
