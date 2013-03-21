@@ -16,10 +16,11 @@ $q1 = "SELECT * FROM ordrar WHERE UserID = '$user'";
 $res1 = mysql_query($q1) or die(mysql_error());
 
 if (!isset($_GET['fetchorder'])) {
+    echo '<div id="productstableheader"><text class="left">Datum</text><text class="right">Ordernummer</text></div><br>';
     echo '<div id="productstable">';
     while ($line = mysql_fetch_array($res1)) {
         echo '<div class="productrow">';
-        echo '<text class="left">Datum</text><a href="index.php?page=order_history&fetchorder=' . $line['OrderID'] . '">' . $line['OrderID'] . '</a>';
+        echo '<text class="left">'.$line['Date'].'</text><a href="index.php?page=order_history&fetchorder=' . $line['OrderID'] . '">' . $line['OrderID'] . '</a>';
         echo '</div>';
     }
     echo '</div>';
@@ -38,6 +39,7 @@ function fetchOrder($resource, $order) {
 
     $cart = unserialize($temp);
 
+    echo '<div id="productstableheader"><text class="left">Produkt</text><text class="right">Antal</text></div><br>';
     echo '<div id="productstable">';
     foreach ($cart as $ProductID => $quantity) {
 
