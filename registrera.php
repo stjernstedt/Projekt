@@ -1,3 +1,5 @@
+<div id="registrera">
+    <h1 class="textreg">Registrera dig</h1>
 <form action="spara_anv.php" method="post" onsubmit="return checkForm(this)">
     <p><label>Förnamn</label><input type="text" name="forename" id="forename" class="textbox">
         <text id="error1" class="errormsg" style="display: none">Ej korrekt namn!</text></p>
@@ -21,7 +23,7 @@
     <p><label>Lösenord igen</label><input type="password" name="password2" id="password2" class="textbox">
         <text id="error10" class="errormsg" style="display: none">Lösenordet är inte samma!</text></p>
 
-    <p><input type="submit" value="Registrera">
+    <p><input type="submit"class="inputknapp" value="Registrera">
 
         <?php
         if (isset($_SESSION['errormsg'])) {
@@ -30,3 +32,4 @@
         }
         ?>
 </form>
+</div>
