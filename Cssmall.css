@@ -201,6 +201,9 @@ a:active{
     line-height: 20px;
     margin: 5px;
 }
+#navigering{
+    margin-left: 100px;
+}
 .vara{
     opacity: 0.8;
     -webkit-transition-property: background-color;
