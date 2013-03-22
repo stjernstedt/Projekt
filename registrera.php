@@ -2,9 +2,9 @@
     <h1 class="textreg">Registrera dig</h1>
 <form action="spara_anv.php" method="post" onsubmit="return checkForm(this)">
     <p><label>Förnamn</label><input type="text" name="forename" id="forename" class="textbox">
-        <text id="error1" class="errormsg" style="display: none">Ej korrekt namn!</text></p>
+        <text id="error1" class="errormsg" style="display: none">Ej korrekt Förnamn!</text></p>
     <p><label>Efternamn</label><input type="text" name="surname" id="surname" class="textbox">
-        <text id="error2" class="errormsg" style="display: none">Ej korrekt namn!</text></p>
+        <text id="error2" class="errormsg" style="display: none">Ej korrekt Efternamn!</text></p>
     <p><label>Personnummer</label><input type="text" name="personalcn" id="personalcn" class="textbox" placeholder="YYMMDDXXXX">
         <text id="error3" class="errormsg" style="display: none">Ej korrekt personnummer!</text></p>
     <p><label>Adress</label><input type="text" name="address" id="address" class="textbox">
@@ -14,7 +14,7 @@
     <p><label>E-mail</label><input type="text" name="email" id="email" class="textbox">
         <text id="error6" class="errormsg" style="display: none">Ej korrekt email!</text></p>
     <p><label>Telefon</label><input type="text" name="phonenr" id="phonenr" class="textbox">
-        <text id="error7" class="errormsg" style="display: none">Ej korrekt telefonnummer!</text></p>
+        <text id="error7" class="errormsg" style="display: none">Ej korrekt nummer!</text></p>
     <br>
     <p><label>Användarnamn</label><input type="text" name="userid" id="userid" class="textbox">
         <text id="error8" class="errormsg" style="display: none">Välj ett användarnamn mellan 3 och 50 tecken!</text></p>
@@ -23,7 +23,7 @@
     <p><label>Lösenord igen</label><input type="password" name="password2" id="password2" class="textbox">
         <text id="error10" class="errormsg" style="display: none">Lösenordet är inte samma!</text></p>
 
-    <p><input type="submit"class="inputknapp" value="Registrera">
+    <p><input type="submit"class="inputknappreg" value="Registrera">
 
         <?php
         if (isset($_SESSION['errormsg'])) {

@@ -83,7 +83,7 @@ while ($line = mysql_fetch_array($res1)) {
     echo $line['Information'] . '<br>';
     echo '</div>';
     echo '<div class="varuknappar">';
-    echo "<a href='cart.php?action=add&id=$id'>Add To Cart</a>" . "<a href='view_info.php?id=$id'> View info</a>" . '<br>' . '<br>';
+    echo "<a href='index.php?page=cart&action=add&id=$id'>Lägg till</a>" . "<a href='index.php?page=view_info&id=$id'>Info</a>" . '<br>' . '<br>';
     echo '</div>';
     echo '</div>';
     echo '</div>';

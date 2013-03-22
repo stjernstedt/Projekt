@@ -10,7 +10,7 @@ body{
 
 }
 /*Style för alla knappar*/
-#submitknapp,.inputknapp, a{
+#submitknapp,.inputknapp,.inputknappreg, a{
     border: 2px solid #B06515;
     padding: 5px 10px;
     background-color:#966C18;
@@ -32,7 +32,7 @@ body{
     line-height: 30px;
     text-align: center; 
 }
-#submitknapp:hover,.inputknapp:hover, a:hover{
+#submitknapp:hover,.inputknapp:hover,.inputknappreg:hover, a:hover{
     background: -o-linear-gradient(top, #ED8413, #CC6C06);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ED8413', endColorstr='#CC6C06');
     background: -moz-linear-gradient(center top , #ED8413, #CC6C06) repeat scroll 0 0 transparent;
@@ -77,7 +77,7 @@ a:active{
 #header{
     
     height:200px;
-    background-color:#FFE6B5;
+    background-image: url(logga.jpg);
     width:1200px;
 
 }
@@ -458,7 +458,7 @@ label {
     
 }
 #registrera{
-    width:400px;
+    width:500px;
     height: 530px;
     margin-left: 400px;
     margin-top: 50px;
@@ -476,12 +476,20 @@ label {
     margin-left: 130px;
 }
 .textreg{
-    margin-left: 95px;
+    
+    margin-left: 140px;
+    width: 220px;
+    
 }
 .inputknapp{
     margin-left: 150px;
+    width: 100px;
 }
-
+.inputknappreg{
+    margin-left: 200px;
+    width: 100px;
+    
+}
 .errormsg {
     margin-left: 2em;
     color: red;
@@ -489,16 +497,40 @@ label {
 /* forms slutar */
 
 /* stylesheets för kassan */
+
+
+#orderw{
+    width:400px;
+    height: 350px;
+    margin-left:150px;
+    margin-top: 20px;
+    margin-right: 50px;
+    background-color: rgba(255,255,255,0); 
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    box-shadow:  0 2px 4px rgba(0,0,0,.40);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    
+    border-top: #C98236 solid 20px;
+    overflow: auto;
+    float: left;
+}
+#ordertotal{
+    margin-left: 400px;
+}
 #productstable {
-    width: 40%;
+    
+    width: 50%;
     position: relative;
-    left: 30%;
+    left: 25%;
 }
 
 #productstableheader {
-    width: 40%;
+    width: 50%;
     position: relative;
-    left: 30%;
+    left: 25%;
 }
 
 #productstable a {
@@ -512,14 +544,24 @@ label {
     text-align: center;
 }
 
-.productrow:nth-child(odd) {
-    height: 1.4em;
-    background-color: #FFF6BF;
-}
-
 .productrow:nth-child(even) {
     height: 1.4em;
     background-color: #FFE6B5;
+}
+
+.productrow{
+    height: 1.4em;
+    margin-top: 10px;
+     background-color: #FFF6BF; 
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    box-shadow:  0 2px 4px rgba(0,0,0,.40);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding-left: 5px;
+    
+    
 }
 
 text.left {
@@ -534,22 +576,23 @@ text.right {
     float: right;
 }
 
-.checkout a {
-    background-color:#966C18;
-    color:#000000;
-    padding-left: 3em;
-    padding-right: 3em;
-    height: 20px;
-    width: auto;
-    float: right;
-    text-decoration:none;
-    font-weight: bold;
-    text-align: center;
+#checkout a{
+    float:none;
+    height: auto;
+    margin-left: 540px;
 }
-
-.checkout a:hover{
-    background-color:#FFCB63;
-    color:#000000;
+#orderbe{
+    margin-left: 460px;
+}
+#orderinfo{
+    -webkit-box-shadow: -1px -2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: -1px -2px 4px rgba(0,0,0,.40);
+    box-shadow:  -1px -2px 4px rgba(0,0,0,.40);
+    width:500px;
+    padding-left: 5px;
+    margin-top: 20px;
+    height: 370px;
+    float: left;
 }
 
 #createorder {
@@ -572,10 +615,50 @@ text.right {
 /* kassan slutar */
 
 /* stylesheets för profil */
+#profilruta{
+    height:400px;
+    width: 700px;
+    margin-left: 250px;
+    background-color: rgba(255,255,255,0); 
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    box-shadow:  0 2px 4px rgba(0,0,0,.40);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding-bottom: 20px;
+    border-top: #C98236 solid 20px;
+}
+
 #profil {
     float: left;
     margin-left: 3em;
     margin-right: 10em;
 }
-
+#profilknapp{
+    margin-top: 20px;
+}
+#submitknapp{
+    margin-left: 150px;
+}
 /* profil slutar */
+
+
+
+/*Här börjar koden för order historik*/
+#orderhistorik{
+    width: 600px;
+    margin-left: 300px;
+    background-color: rgba(255,255,255,0); 
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    box-shadow:  0 2px 4px rgba(0,0,0,.40);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding-bottom: 20px;
+    border-top: #C98236 solid 20px;
+}
+#orderh{
+    margin-left: 460px;
+}

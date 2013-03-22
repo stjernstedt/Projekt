@@ -17,7 +17,7 @@ while ($line = mysql_fetch_array($res1)) {
 }
 ?>
 
-
+<div id="profilruta">
 <div id="profil">
     <form action="user_edit.php" method="post">
         <p><label>Förnamn</label><input type="text" name="forename" class="textbox" value="<?php echo $user['Forename'] ?>"></p>
@@ -34,7 +34,8 @@ while ($line = mysql_fetch_array($res1)) {
         <p><input type="submit" id="submitknapp" value="Ändra">
     </form>
 </div>
-<div><a href="index.php?page=order_history">Order Historik</a></div>
+<div id="profilknapp"><a href="index.php?page=order_history">Order Historik</a></div>
+</div>
 <?php
 mysql_close($conn);
 ?>

@@ -23,6 +23,6 @@
 
     </div>
     <div id="knappvara">
-        <a href="cart.php">Din varukorg</a>
+        <a href="index.php?page=cart">Din varukorg</a>
     </div>
 </div>
