@@ -4,56 +4,70 @@ $conn = mysql_connect('localhost', 'root');
 mysql_select_db('webbshop');
 mysql_set_charset('utf8');
 
+//if (isset($_GET['belonging'])) {
+//    switch ($_GET['belonging']) {
+//        case 'arbetsrum' :
+//            $belonging = 'Arbetsrum';
+//            break;
+//        case 'kök' :
+//            $belonging = 'Kök';
+//            break;
+//        case 'sovrum' :
+//            $belonging = 'Sovrum';
+//            break;
+//        case 'vardagsrum' :
+//            $belonging = 'Vardagsrum';
+//            break;
+//    }
+//}
+//
+//if (isset($_GET['furniture'])) {
+//    switch ($_GET['furniture']) {
+//        case 'belysning' :
+//            $furniture = 'Belysning';
+//            break;
+//        case 'bord' :
+//            $furniture = 'Bord';
+//            break;
+//        case 'fotölj' :
+//            $furniture = 'Fotölj';
+//            break;
+//        case 'förvaring' :
+//            $furniture = 'Förvaring';
+//            break;
+//        case 'soffa' :
+//            $furniture = 'Soffa';
+//            break;
+//        case 'stol' :
+//            $furniture = 'Stol';
+//            break;
+//        case 'säng' :
+//            $furniture = 'Säng';
+//            break;
+//    }
+//}
+//if (isset($belonging) AND isset($furniture)) {
+//    $prod = 'Belonging = "' . $belonging . '" AND Furnituretype = "' . $furniture . '"';
+//} else {
+//    if (isset($belonging)) {
+//        $prod = 'Belonging = "' . $belonging . '"';
+//    } else {
+//        $prod = 'Furnituretype = "' . $furniture . '"';
+//    }
+//}
+
+$regex = '/[a-z]/';
 if (isset($_GET['belonging'])) {
-    switch ($_GET['belonging']) {
-        case 'arbetsrum' :
-            $belonging = 'Arbetsrum';
-            break;
-        case 'kök' :
-            $belonging = 'Kök';
-            break;
-        case 'sovrum' :
-            $belonging = 'Sovrum';
-            break;
-        case 'vardagsrum' :
-            $belonging = 'Vardagsrum';
-            break;
+    if (preg_match($regex, $_GET['belonging'])) {
+        $belonging = $_GET['belonging'];
+        $prod = 'Belonging = "' . $belonging . '"';
     }
 }
 
 if (isset($_GET['furniture'])) {
-    switch ($_GET['furniture']) {
-        case 'belysning' :
-            $furniture = 'Belysning';
-            break;
-        case 'bord' :
-            $furniture = 'Bord';
-            break;
-        case 'fotölj' :
-            $furniture = 'Fotölj';
-            break;
-        case 'förvaring' :
-            $furniture = 'Förvaring';
-            break;
-        case 'soffa' :
-            $furniture = 'Soffa';
-            break;
-        case 'stol' :
-            $furniture = 'Stol';
-            break;
-        case 'säng' :
-            $furniture = 'Säng';
-            break;
-    }
-}
-
-if (isset($belonging) AND isset($furniture)) {
-    $prod = 'Belonging = "' . $belonging . '" AND Furnituretype = "' . $furniture . '"';
-} else {
-    if (isset($belonging)) {
-        $prod = 'Belonging = "' . $belonging . '"';
-    } else {
-        $prod = 'Furnituretype = "' . $furniture . '"';
+    if (preg_match($regex, $_GET['furniture'])) {
+        $furniture = $_GET['furniture'];
+        $prod = $prod . ' AND Furnituretype = "' . $furniture . '"';
     }
 }
 

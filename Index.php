@@ -7,12 +7,13 @@
     ?>
 <html>
     <head>
-        
+
         <link rel="shortcut icon" href="favicon.ico">
         <META http-equiv="Content-Type" content="text/html;
               charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="Cssmall.css">
         <script language="javascript" type="text/javascript" src="javascript.js"></script>
+        <title>Komfortia</title>
     </head>
     <body>
         <noscript>Din browser stödjer ej javascript!</noscript>
