@@ -16,7 +16,7 @@ while ($line = mysql_fetch_array($res1)) {
     }
 }
 ?>
-
+<h1 id="h1profil">Profil</h1>
 <div id="profilruta">
 <div id="profil">
     <form action="user_edit.php" method="post">

@@ -7,7 +7,7 @@
     ?>
 <html>
     <head>
-        
+        <title>KomfortiaAB</title>
         <link rel="shortcut icon" href="favicon.ico">
         <META http-equiv="Content-Type" content="text/html;
               charset=UTF-8">

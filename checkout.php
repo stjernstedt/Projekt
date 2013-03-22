@@ -9,7 +9,7 @@ if (!isset($_SESSION)) {
 }
 echo '<h1 id="orderbe">Order bekräftelse</h1>';
 echo '<div id="orderw">';
-echo '<div id="productstableheader"><text class="left">Produkt</text><text class="right">Antal</text></div><br>';
+echo '<div id="productstableheader"><text class="left">Produkt</text><text class="center">Antal</text><text class="right1">Pris</text></div><br>';
 echo '<div id="productstable">';
 $total = 200;
 foreach ($_SESSION['cart'] as $ProductID => $quantity) {
@@ -25,7 +25,7 @@ foreach ($_SESSION['cart'] as $ProductID => $quantity) {
         $total = $total + $line_cost;
 
         echo '<div class="productrow">';
-        echo '<text class="left">' . $line['Productname'] . '</text><text class="right">' . $quantity . '</text>';
+        echo '<text class="left">' . $line['Productname'] . '</text><text class="center">'.$quantity. '</text>'.'<text class="right">' .$line['Sellprice']*$quantity.';-'.'</text>';
         echo '</div>';
     }
 }
