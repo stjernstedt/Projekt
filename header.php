@@ -1,10 +1,11 @@
 <div id="header">
+
     <div class="login">
         <?php
         /* visar olika knappar beroende på om användaren är inloggad eller inte */
         if (isset($_SESSION['loggedin'])) {
             echo '
-        Välkommen, ' . $_SESSION['user'] . '                
+        <div id="userbox"><text>Välkommen, ' . $_SESSION['user'] . '</text></div>
         <ul>
         <li><a href="user_logout.php">Logga ut</a></li>
 	<li><a href="index.php?page=profile">Profil</a></li>
@@ -18,12 +19,10 @@
         </ul>
         ';
         }
-        
-        
         ?>
 
     </div>
     <div id="knappvara">
-        <a href="cart.php">Din varukorg</a>
+        <a href="index.php?page=cart">Din varukorg</a>
     </div>
 </div>

@@ -81,12 +81,12 @@
             }
             ?>
         </li>
-        <li><a href="Information.php">Information</a>
+        <li><a href="index.php?page=Information">Information</a>
             <ul>
-                <li><a href="Omoss.php">Om oss</a></li>  
-                <li><a href="KontaktaOss.php">Kontakta oss</a></li> 
-                <li><a href="Frakt.php">Frakt info</a></li>
-                <li><a href="Leverans.php">Leverans</a></li> 
+                <li><a href="index.php?page=Omoss">Om oss</a></li>  
+                <li><a href="index.php?page=KontaktaOss">Kontakta oss</a></li> 
+                <li><a href="index.php?page=Frakt">Frakt info</a></li>
+                <li><a href="index.php?page=Leverans">Leverans</a></li> 
             </ul>
 
 

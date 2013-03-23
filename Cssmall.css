@@ -1,3 +1,7 @@
+html {
+    overflow-y: scroll;
+}
+
 body{
     font-family: sans-serif,arial;
     background-image:url(bakgrundsbild2.jpg);
@@ -6,37 +10,36 @@ body{
 
 }
 /*Style för alla knappar*/
-a{
+a,#submitknapp,.inputknapp,.inputknappreg{
     border: 2px solid #B06515;
     padding: 5px 10px;
     background-color:#966C18;
     text-shadow: 1px 1px #000000;
     color: white;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#C98236', endColorstr='#B06515');
+	
     background: -moz-linear-gradient(center top , #C98236, #B06515) repeat scroll 0 0 transparent;
     background: -webkit-gradient(linear, left top, left bottom, from(#C98236), to(#B06515));
     background: -o-linear-gradient(top, #C98236, #B06515);
     float:left;
-
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
-    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
-    box-shadow:  0 2px 4px rgba(0,0,0,.40);
+    -webkit-box-shadow: 0px 2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: 0px 2px 4px rgba(0,0,0,.40);
+    box-shadow:  0px 2px 4px rgba(0,0,0,.40);
     text-decoration:none;
     font-weight: bold;
     line-height: 30px;
     text-align: center; 
 }
-a:hover{
+#submitknapp:hover,.inputknapp:hover,.inputknappreg:hover, a:hover{
     background: -o-linear-gradient(top, #ED8413, #CC6C06);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ED8413', endColorstr='#CC6C06');
+    
     background: -moz-linear-gradient(center top , #ED8413, #CC6C06) repeat scroll 0 0 transparent;
     background: -webkit-gradient(linear, left top, left bottom, from(#ED8413), to(#CC6C06));
 }
 a:active{
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CC6C06', endColorstr='#ED8413');
+    
     background: -moz-linear-gradient(center top , #CC6C06, #ED8413) repeat scroll 0 0 transparent;
     background: -webkit-gradient(linear, left top, left bottom, from(#CC6C06), to(#ED8413));
 }
@@ -57,8 +60,8 @@ a:active{
     width:1200px;
     margin: 0px auto;
     height:auto;
-   
-    
+
+
 }
 
 #SecondWindow{
@@ -72,11 +75,13 @@ a:active{
 }
 
 #header{
+    
     height:200px;
-    background-color:#FFE6B5;
+    background-image: url(logga.jpg);
     width:1200px;
 
 }
+
 
 /*Här börjar koden för menyn*/
 .Meny li a{
@@ -99,7 +104,7 @@ a:active{
 .Meny  li {
     list-style-type:none;
 
-    positition:relative;
+    position:relative;
     float:left;
 
 }
@@ -142,7 +147,7 @@ a:active{
 
     width: 1200px;
     height: 60px;
-    background-color:#FFE6B5;
+    background-image: url(WoodTextureCoating.jpg);
 }
 /*Här slutar koden för menyn*/
 
@@ -178,6 +183,34 @@ a:active{
 
 }
 
+.login text {
+    border: 2px solid #B06515;
+    padding-right: 1em;
+    padding-left: 1em;
+    margin-bottom: 1em;
+    background-color:#966C18;
+    text-shadow: 1px 1px #000000;
+    color: white;
+    
+    background: -moz-linear-gradient(center top , #C98236, #B06515) repeat scroll 0 0 transparent;
+    background: -webkit-gradient(linear, left top, left bottom, from(#C98236), to(#B06515));
+    background: -o-linear-gradient(top, #C98236, #B06515);
+    float:left;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    box-shadow:  0 2px 4px rgba(0,0,0,.40);
+    text-decoration:none;
+    font-weight: bold;
+    width: auto;
+}
+
+#userbox {
+    height: 1.5em;
+}
 
 .login ul li{
     float:left;
@@ -188,7 +221,6 @@ a:active{
     height: 30px;
     width: 100px;
 }
-
 
 
 /*Här slutar kod för login och reg knapparna*/
@@ -215,9 +247,8 @@ a:active{
     box-shadow:  0 2px 4px rgba(0,0,0,.40);
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
-
     border-radius: 4px;
-    border-top: #C39539 solid 20px;
+    border-top: #C98236 solid 20px;
     padding: 10px;
     margin: 5px;
     width:300px;
@@ -246,7 +277,7 @@ a:active{
     /*border: black solid 1px;*/
     height: 100px;
 }
-#info{
+.info{
     height: 80px;
     /*border: black solid 1px;*/
     overflow: hidden;
@@ -257,6 +288,8 @@ a:active{
 
 }
 /*Här slutar produkter.*/
+
+
 
 /*Här börjar koden för fin utskrift på kolla info om produkter*/
 #storbild{
@@ -285,7 +318,7 @@ a:active{
     margin: 5px;
 }
 
-#inforuta{
+.inforuta{
     /*border: black solid 1px;*/
     height: 80px;
     width: 500px;
@@ -298,29 +331,33 @@ a:active{
 /*Här börjar koden för varukorgen*/
 
 #cartruta{
+    
     width: 700px;
-    margin-left: 320px;
+    margin-left: 250px;
     background-color: rgba(255,255,255,0); 
     -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
     -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
     box-shadow:  0 2px 4px rgba(0,0,0,.40);
-
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-
     padding-bottom: 20px;
-    border-top: #ED8413 solid 20px;
+    border-top: #C98236 solid 20px;
 }
-#cart:nth-child(odd){
+.cart:nth-child(odd){
     background-color: #FFF6BF; 
 }
-#cart{
+.cart{
     margin-left: 75px;
-    border: black solid 1px;
+    margin-top: 10px;
     width: 550px;
     height: 101px;
-
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    box-shadow:  0 2px 4px rgba(0,0,0,.40);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
     background-color: #FFE6B5; 
 }
 .varukorgbild{
@@ -342,12 +379,12 @@ a:active{
 .pris{
     border-left: #B49A66 solid 1px;
     width: 155px;
-    height: 99px;
+    height: 100px;
     margin-left: 140px;
-    margin-top: -65px;
+    margin-top: -66px;
 }
 #h1cart{
-    margin-left: 170px;
+    margin-left: 500px;
 }
 .antal a{
 
@@ -365,32 +402,34 @@ a:active{
     height: 40px;
     width: 100px;
     line-height: 20px;
-    margin: 5px;
+    margin-left: 10px;
 }
+
+
 .cartbutton2 a{
     height: 40px;
     width: 100px;
     line-height: 20px;
     margin-top: 25px;
     margin-left: 275px;
-    
+
 }
 .cartbutton a:nth-child(2){
     line-height: 40px;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 .cartbutton{
-    margin-left: 500px;
+    margin-left: 250px;
+    margin-top: 20px;
 }
-#total{
 
-    height: 150px;
-}
 #total1{
 
     height: 60px;
     width: 300px;
     margin-top: 20px;
-    margin-left: 550px;
+    margin-left: 250px;
 }
 
 
@@ -406,12 +445,56 @@ label {
     margin-left: 3em;
 }
 
-div#inlogg {
-    margin-top: 10em;
-    margin-left: 5em;
-
+#inlogg {
+    
+    width:400px;
+    height: 200px;
+    margin-left: 400px;
+    margin-top: 100px;
+    background-color: rgba(255,255,255,0); 
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    box-shadow:  0 2px 4px rgba(0,0,0,.40);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding-bottom: 20px;
+    border-top: #C98236 solid 20px;
+    
 }
-
+#registrera{
+    width:500px;
+    height: 530px;
+    margin-left: 400px;
+    margin-top: 50px;
+    background-color: rgba(255,255,255,0); 
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    box-shadow:  0 2px 4px rgba(0,0,0,.40);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding-bottom: 20px;
+    border-top: #C98236 solid 20px;
+}
+.textlogin{
+    margin-left: 130px;
+}
+.textreg{
+    
+    margin-left: 140px;
+    width: 220px;
+    
+}
+.inputknapp{
+    margin-left: 150px;
+    width: 100px;
+}
+.inputknappreg{
+    margin-left: 200px;
+    width: 100px;
+    
+}
 .errormsg {
     margin-left: 2em;
     color: red;
@@ -419,33 +502,59 @@ div#inlogg {
 /* forms slutar */
 
 /* stylesheets för kassan */
+
+
+#orderw{
+    width:400px;
+    height: 350px;
+    margin-left:150px;
+    margin-top: 20px;
+    margin-right: 50px;
+    background-color: rgba(255,255,255,0); 
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    box-shadow:  0 2px 4px rgba(0,0,0,.40);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    
+    border-top: #C98236 solid 20px;
+    overflow: auto;
+    float: left;
+}
+#ordertotal{
+    margin-left: 400px;
+}
 #productstable {
-    width: 40%;
+    
+    width: 90%;
     position: relative;
-    left: 30%;
+    left: 5%;
 }
 
+#productstableheader {
+    width: 90%;
+    position: relative;
+    margin-top: 10px;
+    left: 5%;
+}
+#productstableheader .center {
+    margin-left: 125px;
+    
+}
+#productstableheader .right1 {
+    float: right;
+    margin-right: 15px;
+}
 #productstable a {
-    background-color:#966C18;
-    color:#000000;
-    /*    padding-left: 2em;
-        padding-right: 2em;*/
-    height: auto;
-    width: 150px;
+    padding: 0px 1em;
+    height: 1.05em;
+    line-height: initial;
+    width: 4em;
     float: right;
     text-decoration:none;
     font-weight: bold;
     text-align: center;
-}
-
-#productstable a:hover{
-    background-color:#FFCB63;
-    color:#000000;
-}
-
-.productrow:nth-child(odd) {
-    height: 1.4em;
-    background-color: #FFF6BF;
 }
 
 .productrow:nth-child(even) {
@@ -453,34 +562,57 @@ div#inlogg {
     background-color: #FFE6B5;
 }
 
+.productrow{
+    height: 1.4em;
+    margin-top: 0px;
+     background-color: #FFF6BF; 
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    box-shadow:  0 2px 4px rgba(0,0,0,.40);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding-left: 5px;
+    margin-bottom: 7px;
+    
+}
+
 text.left {
     position: relative;
     display: inline;
     float: left;
+    width: 50px;
 }
 
 text.right {
     position: relative;
     display: inline;
     float: right;
+    padding-right: 5px;
+    
 }
-
-.checkout a {
-    background-color:#966C18;
-    color:#000000;
-    padding-left: 3em;
-    padding-right: 3em;
-    height: 20px;
-    width: auto;
-    float: right;
-    text-decoration:none;
-    font-weight: bold;
-    text-align: center;
+text.center {
+    position: relative;
+    display: inline;
+    margin-left: 130px;
 }
-
-.checkout a:hover{
-    background-color:#FFCB63;
-    color:#000000;
+#checkout a{
+    float:none;
+    height: auto;
+    margin-left: 540px;
+}
+#orderbe{
+    margin-left: 460px;
+}
+#orderinfo{
+    -webkit-box-shadow: -1px -2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: -1px -2px 4px rgba(0,0,0,.40);
+    box-shadow:  -1px -2px 4px rgba(0,0,0,.40);
+    width:500px;
+    padding-left: 5px;
+    margin-top: 20px;
+    height: 370px;
+    float: left;
 }
 
 #createorder {
@@ -503,21 +635,79 @@ text.right {
 /* kassan slutar */
 
 /* stylesheets för profil */
-.profilknappar a {
-    background-color:#966C18;
-    color:#000000;
-    height: 20px;
-    width: 200px;
-    text-decoration:none;
-    font-weight: bold;
-    margin-right: 18px;
-    text-align: center;
-    font-size: 15pt;
-    padding: 0.5em;
+#profilruta{
+    height:400px;
+    width: 700px;
+    margin-left: 250px;
+    background-color: rgba(255,255,255,0); 
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    box-shadow:  0 2px 4px rgba(0,0,0,.40);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding-bottom: 20px;
+    border-top: #C98236 solid 20px;
 }
-.profilknappar a:hover{
-    background-color:#FFCB63;
-    color:#000000;
+#h1profil{
+    margin-left: 545px;
+}
+#profil {
+    float: left;
+    margin-left: 3em;
+    margin-right: 10em;
+}
+#profilknapp{
+    margin-top: 20px;
+}
+#submitknapp{
+    margin-left: 150px;
+}
+/* profil slutar */
+
+
+
+/*Här börjar koden för orderhistorik*/
+#orderhistorik{
+    width: 600px;
+    margin-left: 300px;
+    background-color: rgba(255,255,255,0); 
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    box-shadow:  0 2px 4px rgba(0,0,0,.40);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding-bottom: 20px;
+    border-top: #C98236 solid 20px;
+}
+#orderh{
+    margin-left: 460px;
+}
+#tbxorder{
+    margin-left: 500px;
+    margin-top: 20px;
+}
+/*Här slutar kod för orderhistorik*/
+
+/*Här börjar koden för Information*/
+
+#informationsruta{
+    width: 500px;
+    padding-top: 10px;
+    margin-left: 350px;
+    background-color: rgba(255,255,255,0); 
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    box-shadow:  0 2px 4px rgba(0,0,0,.40);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding-bottom: 20px;
+    border-top: #C98236 solid 20px;
+    padding-left: 5px;
 }
 
-/* profil slutar */
+#infobilden{
+    margin-left: 115px;
+}
