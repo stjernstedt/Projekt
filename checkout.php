@@ -10,8 +10,6 @@ if (!isset($_SESSION)) {
 
 
 
-
-
 if (!isset($_SESSION['loggedin'])) {
     echo '<div id="orderhistorik">';
     echo 'Du måste registrera dig eller logga in för att göra ett köp!';
@@ -40,6 +38,18 @@ if (!isset($_SESSION['loggedin'])) {
             echo '</div>';
         }
 
+
+        while ($line = mysql_fetch_array($result)) {
+
+            $Sellprice = $line['Sellprice'];
+            $line_cost = $Sellprice * $quantity;
+            $total = $total + $line_cost;
+
+            echo '<div class="productrow">';
+            echo '<text class="left">' . $line['Productname'] . '</text><text class="right">' . $quantity . '</text>';
+            echo '</div>';
+        }
+
     }
     echo '</div>';
     echo '</div>';
@@ -61,4 +71,6 @@ if (!isset($_SESSION['loggedin'])) {
     echo '</div>';
 }
 
+
 ?>
+
