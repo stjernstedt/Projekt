@@ -7,7 +7,7 @@ mysql_set_charset('utf8');
 //$searchres = array();
 
 $term = str_replace("'", "''", $_GET['term']);
-$q1 = "SELECT * FROM produkter WHERE Productname = '" . $term . "' OR Belonging = '" . $term . "' OR Furnituretype = '" . $term . "'";
+$q1 = "SELECT * FROM produkter WHERE Productname LIKE '%{$term}%' OR Belonging LIKE '%{$term}%' OR Furnituretype LIKE '%{$term}%'";
 $res1 = mysql_query($q1);
 
 if (mysql_num_rows($res1) == 0) {
