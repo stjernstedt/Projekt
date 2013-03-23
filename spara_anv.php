@@ -74,13 +74,14 @@ if (!preg_match($regex, $email)) {
 }
 
 $regex = "/\d{9,10}/";
+$phonenumber = str_replace('-', '', $phonenumber);
 if (!preg_match($regex, $phonenumber)) {
     $_SESSION['errormsg'] = "Ej korrekt telefonnummer!";
     header('Location: index.php?page=registrera');
     exit();
 }
 
-$regex = "/^[^;]\S{3,25}[^;]$/";
+$regex = "/^\S{3,25}$/";
 if (!preg_match($regex, $userid)) {
     $_SESSION['errormsg'] = "Välj ett användarnamn mellan 3 och 50 tecken!";
     header('Location: index.php?page=registrera');
@@ -97,8 +98,7 @@ if (!preg_match($regex, $password)) {
 $regex = '/' . $password . '/';
 if (!preg_match($regex, $password2)) {
     $_SESSION['errormsg'] = "Lösenordet är inte samma!";
-    echo $password . '<br>' . $password2;
-//    header('Location: index.php?page=registrera');
+    header('Location: index.php?page=registrera');
     exit();
 }
 

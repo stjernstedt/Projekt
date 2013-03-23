@@ -1,8 +1,10 @@
+
 <?php
 if (!isset($_SESSION)) {
     session_start();
 }
 ?>
+
 
 <div id="informationsruta">
 
@@ -16,3 +18,4 @@ if (!isset($_SESSION)) {
     </p>
 
 </div>
+

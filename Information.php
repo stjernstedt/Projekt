@@ -1,4 +1,5 @@
 
+
 <div id="informationsruta">
     
        <img id="infobilden" src="Bilder/Info.jpg"> 
