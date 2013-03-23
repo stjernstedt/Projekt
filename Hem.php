@@ -4,6 +4,7 @@
     <br>
     <h1>TEXT TEXT TEXT</h1>
     <br>
-    <img src="Bilder/Kök.jpg">  <img src="Bilder/Vardagsrum.jpg">
-    <img src="Bilder/Sovrum.jpg">          
+      <a href="index.php?page=productdisplay&belonging=vardagsrum"><img src="Bilder/Vardagsrum.jpg"></a>
+      <a href="index.php?page=productdisplay&belonging=kök"><img src="Bilder/Kök.jpg"></a>
+    <a href="index.php?page=productdisplay&belonging=sovrum"><img src="Bilder/Sovrum.jpg"></a>          
 </div>

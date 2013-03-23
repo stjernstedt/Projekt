@@ -11,7 +11,7 @@ if (!isset($_SESSION)) {
 <br>
 <H3>Kundtjänst:</H3>
 För att komma i kontakt med våran kundtjänst rekommenderar vi att man ringer alternativt mailar till oss.<br>
-För frågor rörande Kök skicka e-post till Kök@Comfort.com andra frågor skickas till Info@Comfort.com
+För frågor rörande Kök skicka e-post till Kök@Comfort.com andra frågor skickas till Info@KomfortiaAB.com
 
 
                 <H3>Telefontider:</H3>
