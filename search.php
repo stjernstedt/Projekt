@@ -22,7 +22,7 @@ if (mysql_num_rows($res1) == 0) {
     echo '</div>';
 }
 
-
+//
 //while ($line = mysql_fetch_array($res1)) {
 //    if (stristr($line['Productname'], $_GET['term']) OR stristr($line['Belonging'], $_GET['term'])
 //            OR stristr($line['Furnituretype'], $_GET['term'])) {

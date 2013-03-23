@@ -10,13 +10,13 @@ body{
 
 }
 /*Style för alla knappar*/
-#submitknapp,.inputknapp,.inputknappreg, a{
+a,#submitknapp,.inputknapp,.inputknappreg{
     border: 2px solid #B06515;
     padding: 5px 10px;
     background-color:#966C18;
     text-shadow: 1px 1px #000000;
     color: white;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#C98236', endColorstr='#B06515');
+	
     background: -moz-linear-gradient(center top , #C98236, #B06515) repeat scroll 0 0 transparent;
     background: -webkit-gradient(linear, left top, left bottom, from(#C98236), to(#B06515));
     background: -o-linear-gradient(top, #C98236, #B06515);
@@ -24,9 +24,9 @@ body{
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
-    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
-    box-shadow:  0 2px 4px rgba(0,0,0,.40);
+    -webkit-box-shadow: 0px 2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: 0px 2px 4px rgba(0,0,0,.40);
+    box-shadow:  0px 2px 4px rgba(0,0,0,.40);
     text-decoration:none;
     font-weight: bold;
     line-height: 30px;
@@ -34,12 +34,12 @@ body{
 }
 #submitknapp:hover,.inputknapp:hover,.inputknappreg:hover, a:hover{
     background: -o-linear-gradient(top, #ED8413, #CC6C06);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ED8413', endColorstr='#CC6C06');
+    
     background: -moz-linear-gradient(center top , #ED8413, #CC6C06) repeat scroll 0 0 transparent;
     background: -webkit-gradient(linear, left top, left bottom, from(#ED8413), to(#CC6C06));
 }
 a:active{
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CC6C06', endColorstr='#ED8413');
+    
     background: -moz-linear-gradient(center top , #CC6C06, #ED8413) repeat scroll 0 0 transparent;
     background: -webkit-gradient(linear, left top, left bottom, from(#CC6C06), to(#ED8413));
 }
@@ -191,7 +191,7 @@ a:active{
     background-color:#966C18;
     text-shadow: 1px 1px #000000;
     color: white;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#C98236', endColorstr='#B06515');
+    
     background: -moz-linear-gradient(center top , #C98236, #B06515) repeat scroll 0 0 transparent;
     background: -webkit-gradient(linear, left top, left bottom, from(#C98236), to(#B06515));
     background: -o-linear-gradient(top, #C98236, #B06515);
