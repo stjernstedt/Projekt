@@ -16,7 +16,7 @@ a,#submitknapp,.inputknapp,.inputknappreg{
     background-color:#966C18;
     text-shadow: 1px 1px #000000;
     color: white;
-	
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#C98236', endColorstr='#B06515');
     background: -moz-linear-gradient(center top , #C98236, #B06515) repeat scroll 0 0 transparent;
     background: -webkit-gradient(linear, left top, left bottom, from(#C98236), to(#B06515));
     background: -o-linear-gradient(top, #C98236, #B06515);
@@ -34,12 +34,12 @@ a,#submitknapp,.inputknapp,.inputknappreg{
 }
 #submitknapp:hover,.inputknapp:hover,.inputknappreg:hover, a:hover{
     background: -o-linear-gradient(top, #ED8413, #CC6C06);
-    
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#C98236', endColorstr='#B06515');
     background: -moz-linear-gradient(center top , #ED8413, #CC6C06) repeat scroll 0 0 transparent;
     background: -webkit-gradient(linear, left top, left bottom, from(#ED8413), to(#CC6C06));
 }
 a:active{
-    
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#C98236', endColorstr='#B06515');
     background: -moz-linear-gradient(center top , #CC6C06, #ED8413) repeat scroll 0 0 transparent;
     background: -webkit-gradient(linear, left top, left bottom, from(#CC6C06), to(#ED8413));
 }
@@ -191,7 +191,7 @@ a:active{
     background-color:#966C18;
     text-shadow: 1px 1px #000000;
     color: white;
-    
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#C98236', endColorstr='#B06515');
     background: -moz-linear-gradient(center top , #C98236, #B06515) repeat scroll 0 0 transparent;
     background: -webkit-gradient(linear, left top, left bottom, from(#C98236), to(#B06515));
     background: -o-linear-gradient(top, #C98236, #B06515);
