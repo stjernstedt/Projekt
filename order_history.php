@@ -41,6 +41,7 @@ function fetchOrder($resource, $order) {
 
 
     $cart = unserialize($temp);
+echo '<h1 id="dinorder">Din order</h1>';
     echo '<div id="orderhistorik">';
     echo '<div id="productstableheader"><text class="left">Produkt</text><text class="center">Antal</text><text class="right">Pris</text></div><br>';
     echo '<div id="productstable">';
