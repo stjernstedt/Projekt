@@ -617,20 +617,11 @@ text.center {
 
 #createorder {
     position: relative;
-    background-color: #B49A66;
     width: 50%;
     margin-left: 25%;
     height: 100px;
 }
 
-#createorder h1 {
-    color:#000000;
-    position: relative;
-    padding-top: 1em;
-    text-decoration:none;
-    font-weight: bold;
-    text-align: center;
-}
 
 /* kassan slutar */
 
@@ -717,4 +708,7 @@ text.center {
 
 #dinorder{
     margin-left: 500px;
+}
+#hemknappar{
+    margin-left: 150px;
 }

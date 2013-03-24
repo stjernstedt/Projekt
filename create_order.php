@@ -16,7 +16,7 @@ $q1 = "INSERT INTO ordrar (OrderID, UserID, Products, Date) VALUES (DEFAULT, '$u
 $res1 = mysql_query($q1) or die(mysql_error());
 
 echo '<div id="createorder">';
-echo '<h1>Tack för ditt köp!</h1>';
+echo '<img src=Bilder/köp.png>';
 echo '</div>';
 mysql_close($conn);
 ?>
