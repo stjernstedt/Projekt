@@ -34,7 +34,7 @@ if (!isset($_SESSION['loggedin'])) {
             $total = $total + $line_cost;
 
             echo '<div class="productrow">';
-            echo '<text class="left">' . $line['Productname'] . '</text><text class="center">' . $quantity . '</text>'.'</text><text class="right">' . $line['Sellprice']*$quantity .';-'. '</text>';
+            echo '<text class="left">' . $line['Productname'] . '</text><text class="center">' . $quantity . '</text>'.'</text><text class="right">' . $line['Sellprice']*$quantity .':-'. '</text>';
             echo '</div>';
         }
 
