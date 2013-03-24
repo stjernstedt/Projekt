@@ -54,7 +54,7 @@ echo '<h1 id="dinorder">Din order</h1>';
         while ($line = mysql_fetch_array($result)) {
             
             echo '<div class="productrow">';
-            echo '<text class="left">' . $line['Productname'] . '</text><text class="center">' . $quantity . '</text>'.'</text><text class="right">' . $line['Sellprice']*$quantity .';-'. '</text>';
+            echo '<text class="left">' . $line['Productname'] . '</text><text class="center">' . $quantity . '</text>'.'</text><text class="right">' . $line['Sellprice']*$quantity .':-'. '</text>';
             echo '</div>';
         }
     }
