@@ -1,7 +1,7 @@
 
 
 <div id="informationsruta">
-    
+    <h1 id="information">Information</h1>
        <img id="infobilden" src="Bilder/Info.jpg"> 
 	   <br>
 	   Vi är ett av landets mest ledande företag vad gäller möbler i bra kvalite. <br> KomfortiaAB står för låga priser och snabba leveranser.
