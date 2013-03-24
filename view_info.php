@@ -21,7 +21,7 @@ if (!isset($_SESSION)) {
                 . 'Höjd: ' . $row['Height'] . " cm<br>"
                 . 'Djup: ' . $row['Depth'] . " cm<br>"
                 . 'Bredd: ' . $row['Width'] . " cm<br><br>"
-                . 'Pris: ' . $row['Sellprice'] . "Kr<br><br><br><br><br>"
+                . 'Pris: ' . $row['Sellprice'] . "Kr<br><br><br><br><br><br><br>"
                 . "<a href='index.php?page=cart&action=add&id=$id'>Lägg till</a>"
                 . '</div>';
                 echo '<div class="inforuta">';

@@ -271,6 +271,10 @@ a:active{
 .bild{
     margin-left: 90px;
     margin-bottom: 20px;
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    box-shadow:  0 2px 4px rgba(0,0,0,.40);
+    
 }
 .varuutskrift{
     position: relative;
@@ -293,10 +297,12 @@ a:active{
 
 /*Här börjar koden för fin utskrift på kolla info om produkter*/
 #storbild{
-    /*border: black solid 1px;*/
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    box-shadow:  0 2px 4px rgba(0,0,0,.40);
     width: 500px;
     height: 500px;
-
+    
 }
 #varansinfo{
     /*border: black solid 1px;*/
@@ -307,21 +313,48 @@ a:active{
     /*border: black solid 1px;*/
     width: 300px;
     float: right;
-    margin-top: -480px;
+    margin-top: -500px;
     margin-right: 80px;
-    font-size: 20pt;
-    height: 480px;
+    background-color: rgba(255,255,255,0); 
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    box-shadow:  0 2px 4px rgba(0,0,0,.40);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding-bottom: 20px;
+    border-top: #C98236 solid 20px;
+    height: 460px;
+    font-size: 19pt;
+    padding-left: 5px;
 }
 .viktiginfo a{
+    margin-top: 50px;
     height: 40px;
     width: 120px;
-    margin: 5px;
+    
+    margin-left: 90px;
+    float: none;
+    font-size: 14pt;
 }
 
 .inforuta{
     /*border: black solid 1px;*/
+    margin-top: 10px;
     height: 80px;
-    width: 500px;
+    width: 495px;
+    background-color: rgba(255,255,255,0); 
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,.40);
+    box-shadow:  0 2px 4px rgba(0,0,0,.40);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding-bottom: 20px;
+    border-top: #C98236 solid 20px;
+    
+    
+    padding-left: 5px;
 }
 
 

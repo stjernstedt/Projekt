@@ -88,9 +88,9 @@ while ($line = mysql_fetch_array($res1)) {
 
     echo '<div class="vara">';
     echo '<div class="varuutskrift">';
-    echo '<div class="bild">';
-    echo '<img src="Bilder/' . $line['ProductID'] . '.jpg">';
-    echo '</div>';
+    
+    echo '<img class="bild" src="Bilder/' . $line['ProductID'] . '.jpg">';
+    
     echo '<div class="info">';
     echo $line['Productname'] . '<br>';
     echo $line['Sellprice'] . ' kr' . '<br>';
