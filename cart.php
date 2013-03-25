@@ -13,29 +13,30 @@ if (!isset($_SESSION)) {
 
                 <?php
                 $ProductID = $_GET['id'];
-                //the product id from the URL 
-                $action = $_GET['action']; //the action from the URL 
-                //if there is an product_id and that product_id doesn't exist display an error message
+                
+                $action = $_GET['action']; 
+                /*Om om produktid inte existerar så gör den funktionen product exists som finns längre ner i koden*/
+               
                 if ($ProductID && !productExists($ProductID)) {
                     die("Error. Product Doesn't Exist");
                 }
-
-                switch ($action) { //decide what to do	
+                /*Här bestämmer den om den ska lägga till i antal på produkten i varukorgen eller om du ska ta bort en i antal eller tömma korgen helt*/
+                switch ($action) { 
                     case "add":
 
 
-                        $_SESSION['cart'][$ProductID]++; //add one to the quantity of the product with id $product_id 
+                        $_SESSION['cart'][$ProductID]++;
 
                         break;
 
                     case "remove":
-                        $_SESSION['cart'][$ProductID]--; //remove one from the quantity of the product with id $product_id 
+                        $_SESSION['cart'][$ProductID]--; 
                         if ($_SESSION['cart'][$ProductID] == 0)
-                            unset($_SESSION['cart'][$ProductID]); //if the quantity is zero, remove it completely (using the 'unset' function) - otherwise is will show zero, then -1, -2 etc when the user keeps removing items. 
+                            unset($_SESSION['cart'][$ProductID]); 
                         break;
 
                     case "empty":
-                        unset($_SESSION['cart']); //unset the whole cart, i.e. empty the cart. 
+                        unset($_SESSION['cart']);
                         
                         break;
                 }
@@ -45,17 +46,16 @@ if (!isset($_SESSION)) {
 
                 <?php
                 $total = 0;
-                if (isset($_SESSION['cart'])) { //if the cart isn't empty
-                    //show the cart
-                    //format the cart using a HTML table
-                    //iterate through the cart, the $product_id is the key and $quantity is the value
+                /*Här visar den varukorgen om det finns en produkt tillagd annars visar den att din varukorg är tom*/
+                if (isset($_SESSION['cart'])) { 
+                    
                     echo '<h1 id="h1cart">Varukorg</h1>';
 
                     echo '<div id="cartruta">';
                     foreach ($_SESSION['cart'] as $ProductID => $quantity) {
 
-                        //get the name, description and price from the database - this will depend on your database implementation.
-                        //use sprintf to make sure that $product_id is inserted into the query as a number - to prevent SQL injection
+                       /*Du använder sprintf för att vara säker om id du skickar in i frågan är ett nummer för att förhindra sql injection.*/
+                       
                         $sql = sprintf("SELECT Productname, Sellprice FROM produkter WHERE ProductID = %d;", $ProductID);
 
                         $result = mysql_query($sql);
@@ -108,7 +108,7 @@ if (!isset($_SESSION)) {
                     echo '</div>';
                     
                 } else {
-                    
+                    /*Utskrift för varukorgen om den är tom*/
                     echo '<h1 id="h1cart">Varukorg</h1>';
                     echo '<div id="maincart">';
                     echo '<div id="cartruta">';
@@ -128,7 +128,7 @@ if (!isset($_SESSION)) {
                     echo '</div>';
                     echo '</div>';
                 }
-
+                /*Denna function kollar om en produkt exicterar eller ej.*/
                 function productExists($ProductID) {
 
                     $sql = sprintf("SELECT * FROM produkter WHERE ProductID = %d;", $ProductID);

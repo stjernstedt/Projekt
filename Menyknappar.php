@@ -75,7 +75,7 @@
 
 
             <?php
-
+            /*Här gör jag en funktion som gör det lättare att ändra på knappar, se ovan*/
             function createLink($belonging, $furniture, $title) {
                 echo '<li><a href="index.php?page=productdisplay&belonging=' . $belonging . '&furniture=' . $furniture . '">' . $title . '</a></li>';
             }

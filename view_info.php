@@ -15,6 +15,7 @@ if (!isset($_SESSION)) {
                 $sql = "SELECT Productname, Sellprice, Information,Weight,Height,Depth,Width FROM produkter WHERE ProductID='$id'";
                 $result = mysql_query($sql) or die("Query Failed" . mysqpl_error());
                 $row = mysql_fetch_array($result);
+                /*Här Skrivs rutan ut för varans info samt dess data*/
                 echo '<div id="varansinfo">';
                 echo '<div id="storbild">' . '<img src="storabilder/' . $id . '.jpg">' . '</div>' . '<div class="viktiginfo">' . 'Produkt: ' . $row['Productname'] . "<br>"
                 . 'Vikt: ' . $row['Weight'] . " kg<br>"
