@@ -9,7 +9,8 @@ if (!isset($_SESSION)) {
 }
 
 
-
+//om användaren ej är inloggad varnas det
+//annars visas orderbekräftelsen
 if (!isset($_SESSION['loggedin'])) {
     echo '<div id="orderhistorik">';
     echo 'Du måste registrera dig eller logga in för att göra ett köp!';
@@ -21,6 +22,8 @@ if (!isset($_SESSION['loggedin'])) {
     echo '<div id="productstableheader"><text class="left">Produkt</text><text class="center">Antal</text><text class="right">Pris</text></div><br>';
     echo '<div id="productstable">';
     $total = 200;
+    
+//    går igenom alla produkter som finns i kundvagnen och skriver ut dom
     foreach ($_SESSION['cart'] as $ProductID => $quantity) {
 
         $sql = sprintf("SELECT Productname, Sellprice FROM produkter WHERE ProductID = %d;", $ProductID);
@@ -34,22 +37,21 @@ if (!isset($_SESSION['loggedin'])) {
             $total = $total + $line_cost;
 
             echo '<div class="productrow">';
-            echo '<text class="left">' . $line['Productname'] . '</text><text class="center">' . $quantity . '</text>'.'</text><text class="right">' . $line['Sellprice']*$quantity .':-'. '</text>';
+            echo '<text class="left">' . $line['Productname'] . '</text><text class="center">' . $quantity . '</text>' . '</text><text class="right">' . $line['Sellprice'] * $quantity . ':-' . '</text>';
             echo '</div>';
         }
 
 
-        while ($line = mysql_fetch_array($result)) {
-
-            $Sellprice = $line['Sellprice'];
-            $line_cost = $Sellprice * $quantity;
-            $total = $total + $line_cost;
-
-            echo '<div class="productrow">';
-            echo '<text class="left">' . $line['Productname'] . '</text><text class="right">' . $quantity . '</text>';
-            echo '</div>';
-        }
-
+//        while ($line = mysql_fetch_array($result)) {
+//
+//            $Sellprice = $line['Sellprice'];
+//            $line_cost = $Sellprice * $quantity;
+//            $total = $total + $line_cost;
+//
+//            echo '<div class="productrow">';
+//            echo '<text class="left">' . $line['Productname'] . '</text><text class="right">' . $quantity . '</text>';
+//            echo '</div>';
+//        }
     }
     echo '</div>';
     echo '</div>';
@@ -70,7 +72,5 @@ if (!isset($_SESSION['loggedin'])) {
     echo '<a href="index.php?page=create_order">Godkänn köp</a>';
     echo '</div>';
 }
-
-
 ?>
 

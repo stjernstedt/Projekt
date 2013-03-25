@@ -1,5 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http//www.w3.org/T/html4/loose.dtd">
+<!--startar en session om ingen finns-->
     <?php
     if (!isset($_SESSION)) {
         session_start();
@@ -26,7 +27,7 @@
             <div id="SecondWindow">
 
 
-
+<!--hämtar sida beroende på vilket som skickas med url'en-->
                 <?php
                 if (isset($_GET['page'])) {
                     include($_GET['page'] . ".php");

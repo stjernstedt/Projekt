@@ -21,6 +21,7 @@ $userid = $_POST['userid'];
 $password = $_POST['password'];
 $password2 = $_POST['password2'];
 
+//input testas på serversidan för att se att det är korrekt
 $regex = "/^[a-zåäöÅÄÖ]{2,24}$/i";
 if (!preg_match($regex, $forename)) {
     $_SESSION['errormsg'] = "Ej korrekt förnamn!";
@@ -51,6 +52,7 @@ if (!preg_match($regex, $address)) {
 $regex = "/^\d{3}\s?\d{2}$/";
 $zipcode = str_replace(' ', '', $zipcode);
 
+//här kollas postnummret mot databasen för att se om det verkligen finns
 if (!preg_match($regex, $zipcode)) {
     $_SESSION['errormsg'] = "Ej korrekt postnummer!";
     header('Location: index.php?page=registrera');
@@ -122,7 +124,8 @@ while ($line = mysql_fetch_array($res2)) {
     }
 }
 
-/* För in data i databasen om checkarna var ok */
+//För in data i databasen om checkarna var ok
+//Lösenord sparas som en md5 hash
 $password = md5($password);
 if ($exists == false) {
     $q1 = "INSERT INTO login VALUES ('$userid', '$password')";

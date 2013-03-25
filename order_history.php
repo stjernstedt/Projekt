@@ -14,6 +14,7 @@ $user = $_SESSION['user'];
 $q1 = "SELECT * FROM ordrar WHERE UserID = '$user'";
 $res1 = mysql_query($q1) or die(mysql_error());
 
+//om specifik order ej har valts skrivs hela orderlistan ut
 if (!isset($_GET['fetchorder'])) {
     echo '<h1 id="orderh">Din orderhistorik</h1>';
     echo '<div id="orderhistorik">';
@@ -31,6 +32,7 @@ if (!isset($_GET['fetchorder'])) {
     fetchOrder($res1, $_GET['fetchorder']);
 }
 
+//funktion som hämtar lagrad kundvagn och skriver ut den
 function fetchOrder($resource, $order) {
 
     while ($line = mysql_fetch_array($resource)) {
@@ -39,9 +41,9 @@ function fetchOrder($resource, $order) {
         }
     }
 
-
+//  gör om strängen som kundvagnen är lagrad som till en array
     $cart = unserialize($temp);
-echo '<h1 id="dinorder">Din order</h1>';
+    echo '<h1 id="dinorder">Din order</h1>';
     echo '<div id="orderhistorik">';
     echo '<div id="productstableheader"><text class="left">Produkt</text><text class="center">Antal</text><text class="right">Pris</text></div><br>';
     echo '<div id="productstable">';
@@ -50,11 +52,11 @@ echo '<h1 id="dinorder">Din order</h1>';
         $sql = sprintf("SELECT Productname, Sellprice FROM produkter WHERE ProductID = %d;", $ProductID);
 
         $result = mysql_query($sql);
-         
+
         while ($line = mysql_fetch_array($result)) {
-            
+
             echo '<div class="productrow">';
-            echo '<text class="left">' . $line['Productname'] . '</text><text class="center">' . $quantity . '</text>'.'</text><text class="right">' . $line['Sellprice']*$quantity .':-'. '</text>';
+            echo '<text class="left">' . $line['Productname'] . '</text><text class="center">' . $quantity . '</text>' . '</text><text class="right">' . $line['Sellprice'] * $quantity . ':-' . '</text>';
             echo '</div>';
         }
     }

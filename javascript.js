@@ -6,7 +6,6 @@ function checkForm() {
     }
     
     // Reguljära uttryck som kollar att det är rimlig data
-    
     // Om det reguljära uttrycket och indatan ej matchar ges ett error
     var regex = /^[a-zåäö]{2,24}$/i;
     var input = document.getElementById('forename').value;
@@ -79,6 +78,7 @@ function checkForm() {
 
 }
 
+//ser till så att sökrutan fungerar även med gömd submit knapp i IE och Chrome
 function addInputSubmitEvent(form, input) {
     input.onkeydown = function(e) {
         e = e || window.event;

@@ -1,5 +1,6 @@
 <div id="registrera">
     <h1 class="textreg">Registrera dig</h1>
+    <!--text taggarna är gömda och tas fram av javascript vid fel input-->
 <form action="spara_anv.php" method="post" onsubmit="return checkForm(this)">
     <p><label>Förnamn</label><input type="text" name="forename" id="forename" class="textbox">
         <text id="error1" class="errormsg" style="display: none">Ej korrekt Förnamn!</text></p>

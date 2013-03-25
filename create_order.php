@@ -8,6 +8,7 @@ $conn = mysql_connect('localhost', 'root');
 mysql_select_db('webbshop');
 mysql_set_charset('utf8');
 
+//gör om kundvagnens array till en string för lagring i databas
 $cart = serialize($_SESSION['cart']);
 $user = $_SESSION['user'];
 $date = date('Y-m-d');
